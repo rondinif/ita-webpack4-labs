@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-05**: asset-management - ripulisti
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-05**: asset-management - ripulisti
 
 ## guida di riferimento
 - https://webpack.js.org/guides/asset-management/

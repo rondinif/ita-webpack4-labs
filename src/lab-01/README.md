@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-01**: dall'`unboundled` al primo pacchetto
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-01**: dall'`unboundled` al primo pacchetto
 elementare esercizio che consiste nell'impacchettare il codice di `lab-01-unboundled` 
 ## guida di riferimento
 - https://webpack.js.org/guides/getting-started/#basic-setup

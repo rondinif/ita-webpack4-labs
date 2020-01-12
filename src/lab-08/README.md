@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-08**: gestione dell'output - HtmlWebpackPlugin + CleanWebpackPlugin
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-08**: gestione dell'output - HtmlWebpackPlugin + CleanWebpackPlugin
 
 ## guida di riferimento
 - https://webpack.js.org/guides/output-management/
