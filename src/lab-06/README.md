@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-06**: gestione dell'output - endpoint multipli
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-06**: gestione dell'output - endpoint multipli
 
 ## guida di riferimento
 - https://webpack.js.org/guides/output-management/

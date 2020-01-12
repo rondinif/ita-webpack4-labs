@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-07**: gestione dell'output - HtmlWebpackPlugin
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-07**: gestione dell'output - HtmlWebpackPlugin
 
 ## guida di riferimento
 - https://webpack.js.org/guides/output-management/

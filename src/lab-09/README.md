@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-09**: ambiente di sviluppo - sourcemaps 
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-09**: ambiente di sviluppo - sourcemaps 
 **ATTENZIONE**: questo laboratorio contiene volutamente un errore che serve a darci la possibilità di verificare il funzionamento delle ”source maps"
 
 ## guida di riferimento
