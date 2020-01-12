@@ -1,0 +1,49 @@
+{
+  "name": "@rondinif/ita-webpack4-labs",
+  "version": "0.1.0",
+  "description": "Learning labs  with accompanying notes in Italian to dive into webpack4 eco-system",
+  "private": true,
+  "author": "rondinif",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build-lab-01 && npm run build-lab-02a && npm run build-lab-02b && npm run build-lab-02c && npm run build-lab-03 && npm run build-lab-04 && npm run build-lab-05 && npm run build-lab-06 && npm run build-lab-07 && npm run build-lab-08 && npm run build-lab-09",
+    "ex01": "rm -rf dist/ex01; webpack-cli --config=./src/ex01/webpack.config-ex01.js --mode=development --output=dist/ex01/ex01.js --entry=./src/ex01/src/file.js",
+    "build-lab-01": "rm -rf dist/lab-01; webpack-cli --config=./src/lab-01/webpack.config.js --mode=development",
+    "build-lab-01-with-npx": "rm -rf dist/lab-01 & npx webpack --config src/lab-01/webpack.config.js --mode=development",
+    "build-lab-02a": "rm -rf dist/lab-02 & npx webpack --config src/lab-02/url-loader.webpack.config.js --mode=development",
+    "build-lab-02b": "rm -rf dist/lab-02 & npx webpack --config src/lab-02/file-loader-1.webpack.config.js --mode=development",
+    "build-lab-02c": "rm -rf dist/lab-02 & npx webpack --config src/lab-02/file-loader-2.webpack.config.js --mode=development",
+    "build-lab-03": "rm -rf dist/lab-03 & npx webpack --config src/lab-03/webpack.config.js --mode=development",
+    "build-lab-04": "rm -rf dist/lab-04 & npx webpack --config src/lab-04/webpack.config.js --mode=development",
+    "build-lab-05": "rm -rf dist/lab-05 & npx webpack --config src/lab-05/webpack.config.js --mode=development",
+    "build-lab-06": "rm -rf dist/lab-06 & npx webpack --config src/lab-06/webpack.config.js --mode=development",
+    "build-lab-07": "rm -rf dist/lab-07 & npx webpack --config src/lab-07/webpack.config.js --mode=development",
+    "build-lab-08": "npx webpack --config src/lab-08/webpack.config.js --mode=development",
+    "build-lab-09": "npx webpack --config src/lab-09/webpack.config.js --mode=development",
+    "watch-lab-09": "npx webpack --config src/lab-09/webpack.config.js --mode=development --watch",
+    "start-lab-10": "webpack-dev-server --open --config src/lab-10/webpack.config.js --mode=development",
+    "start-lab-11": "node ./src/lab-11/src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "apply-loader": "^2.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "commitlint": "^8.2.0",
+    "css-loader": "^3.4.0",
+    "csv-loader": "^3.0.2",
+    "express": "^4.17.1",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "pug-loader": "^2.4.0",
+    "style-loader": "^1.1.2",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.10.1",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
