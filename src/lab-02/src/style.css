@@ -1,0 +1,21 @@
+
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    margin: 10%;
+    background-color: black;
+    color: white;
+}
+a {
+    color: yellowgreen;
+}
+.hello {
+  color: red;
+  background: url('./images/icon.png');
+}
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
