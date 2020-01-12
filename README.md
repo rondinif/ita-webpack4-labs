@@ -82,7 +82,7 @@ i laboratori compresi tra `lab-02` e `lab-05` si inspirano al capitolo [asset-ma
 i laboratori [`lab-06`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-06), [`lab-07`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-07) e [`lab-08`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-08) ontengono esempi che si inspirano al capitolo [output-management](https://webpack.js.org/guides/output-management/) della guida ufficiale.
 
 ### ambiente di sviluppo , "source maps", "development tools", "watch mode", etc..
-i laboratori [`lab-09`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-09), [`lab-10`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-10) e [`lab-01`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-11) contengono esempi che si inspirano al capitolo [development](https://webpack.js.org/guides/development/) della guida ufficiale.
+i laboratori [`lab-09`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-09), [`lab-10`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-10) e [`lab-11`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-11) contengono esempi che si inspirano al capitolo [development](https://webpack.js.org/guides/development/) della guida ufficiale.
 
 
 ## Contributing 
