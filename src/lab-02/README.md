@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-02**: asset-management
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-02**: asset-management
 utilizzo dei "loaders" per impacchettare risorse (to bundle assets) come stili css e immagini png, icone etc.
 
 ## guida di riferimento

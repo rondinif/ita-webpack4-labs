@@ -64,7 +64,7 @@ E' stato previsto in file `./index.html` che può essere considerato l'indice di
 Alcuni esperimenti ad esempio quelli della lab-10 e guida-11 richiedo passaggi specifici, entrando nella sottocartella relativa all'esperimento, per esempio: `src/lab-10` troverai adeguate istruzioni nella guida specifica: `src/lab-10/README-lab-10.md`
 
 ## cosa contengono i vari laboratori
-Vediamo quali esperimenti possiamo condurre nei laboratori' inclusi in questo repo:
+Vediamo quali esperimenti possiamo condurre nei laboratori inclusi in questo repo:
 
 ### primi passi
 `lab-01-ounbouldled` rappresenta un punto base di partenza "vanilla" ,ancora non  impacchettato, ( buldled ) dal webpack. Nella `lab-01` ripartiamo dallo stesso punto di partenza ed impariamo ad impacchettarlo.
@@ -76,13 +76,13 @@ Si usa la parola `component` quando si parla di  `views`, `templates`, `modules`
 
 Con la parola `asset` si intendono `css`, `images`, `fonts` o anche file di dati che possiamo decidere se associare ai `components` o considerare globali per tutto il progetto.
 
-gli esempi compresi tra `lab-02` e `lab-05` si inspirano al capitolo [asset-management](https://webpack.js.org/guides/asset-management/) della guida ufficiale.
+i laboratori compresi tra `lab-02` e `lab-05` si inspirano al capitolo [asset-management](https://webpack.js.org/guides/asset-management/) della guida ufficiale.
 
 ### gestione dell'output , cioè dei pacchetti generati dal webpack in base alla sua configurazione 
-gli esempi compresi tra `lab-06` e `lab-08` si inspirano al capitolo [output-management](https://webpack.js.org/guides/output-management/) della guida ufficiale.
+i laboratori [`lab-06`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-06), [`lab-07`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-07) e [`lab-08`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-08) ontengono esempi che si inspirano al capitolo [output-management](https://webpack.js.org/guides/output-management/) della guida ufficiale.
 
 ### ambiente di sviluppo , "source maps", "development tools", "watch mode", etc..
-gli esempi compresi tra `lab-09` e `lab-11` si inspirano al capitolo [development](https://https://webpack.js.org/guides/development/) della guida ufficiale.
+i laboratori [`lab-09`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-09), [`lab-10`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-10) e [`lab-01`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-11) contengono esempi che si inspirano al capitolo [development](https://webpack.js.org/guides/development/) della guida ufficiale.
 
 
 ## Contributing 

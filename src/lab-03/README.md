@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-03**: asset-management - fonts
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-03**: asset-management - fonts
 utilizzo dei "loaders" per impacchettare risorse (*to bundle assets*) come possono essere i **webfonts**.
 ## guida di riferimento
 - https://webpack.js.org/guides/asset-management/

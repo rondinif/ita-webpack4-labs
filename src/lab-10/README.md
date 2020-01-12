@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](../..) > **lab-10**: ambiente di sviluppo - `source maps` con `webpack-dev-server`
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-10**: ambiente di sviluppo - `source maps` con `webpack-dev-server`
 
 ## guida di riferimento
 - https://webpack.js.org/guides/development/
