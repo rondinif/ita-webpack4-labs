@@ -23,6 +23,8 @@
     "watch-lab-09": "npx webpack --config src/lab-09/webpack.config.js --mode=development --watch",
     "start-lab-10": "webpack-dev-server --open --config src/lab-10/webpack.config.js --mode=development",
     "start-lab-11": "node ./src/lab-11/src/server.js",
+    "build-lab-83": "npx webpack --config src/lab-83/webpack.config.js --mode=development",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

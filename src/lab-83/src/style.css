@@ -1,0 +1,60 @@
+
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    margin: 10%;
+    background-color: black;
+    color: white;
+}
+a {
+    color: yellowgreen;
+}
+.hello {
+  height: 64px;
+  color: rgb(255, 174, 0);
+  font-family: 'WebFont';
+  font-size: 64px;
+  font-weight: bold;
+  background: url('./images/icon.png');
+}
+
+.icons__item,
+.icons__item i {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.icons__item:hover {
+  color: #3c90be;
+}
+@font-face {
+    font-family: 'WebFont';
+    src:  url('./fonts/webfont.woff2') format('woff2'),
+          url('./fonts/webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+.webfont {
+    display: inline-block;
+    font-family: "webfont";
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+.webfont-3x {
+    font-size: 3em;
+  }
+.webfont-avatar::before {
+    content: "\ea01";
+  }
+  
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
