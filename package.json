@@ -24,7 +24,7 @@
     "start-lab-10": "webpack-dev-server --open --config src/lab-10/webpack.config.js --mode=development",
     "start-lab-11": "node ./src/lab-11/src/server.js",
     "build-lab-83": "npx webpack --config src/lab-83/webpack.config.js --mode=development",
-
+    "build-lab-83-pug": "npx webpack --config src/lab-83-pug/webpack.config.js --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -36,6 +36,7 @@
     "express": "^4.17.1",
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
     "style-loader": "^1.1.2",
     "url-loader": "^3.0.0",

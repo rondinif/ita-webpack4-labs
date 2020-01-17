@@ -14,11 +14,17 @@ cp -R <your-font/webfont-local-git-clone>/demo/ .
 ## per eseguire la `build`
 ``` bash
 $ npm run build-lab-03
-# $ tree -C dist/lab-02
-# dist/lab-02
-# └── bundle.js
+# $ tree -C dist/lab-03
+# dist/lab-03
+# ├── a7a36cd3ecf7e5f9aafbfa9b7e3da99c.woff
+# ├── assets
+# │   └── icon.094233f6d5faa321ee2183cc23ad7958.png
+# ├── bundle.js
+# └── ef570d8d09eec632f850ab0a0f114eaf.woff2
 ```
-<!-- TODO commentare cosa è stato fatto nel:
+
+<!-- 
+TODO commentare cosa è stato fatto nel:
 ### `webpack.config.js`
 -->
 
