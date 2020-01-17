@@ -15,6 +15,7 @@
 - lab-10
 - lab-11
 - lab-83
+- lab-83-pug
 
 <!-- LOADERS -->
 
@@ -23,12 +24,14 @@
 - lab-03
 - lab-04
 - lab-83
+- lab-83-pug
 
 ###     "style-loader": "^1.1.2",
 - lab-02
 - lab-03
 - lab-04
 - lab-83
+- lab-83-pug
 
 ###     "file-loader": "^5.0.2",
 - lab-02
@@ -36,6 +39,7 @@
 file loader viene utilizizzato per caricare nel pacchetto ( dist ) files binari quali ad esempio i fonts o le immagini referenziate nei css
 - lab-04
 - lab-83
+- lab-83-pug
 
 
 ###    "csv-loader": "^3.0.2",
@@ -56,6 +60,7 @@ utilizzato per caricare i dati da xml e loggarli sulla console
 - lab-09
 - lab-10
 - lab-83
+- lab-83-pug
 
 
 ### "clean-webpack-plugin": "^3.0.0",
@@ -63,6 +68,12 @@ utilizzato per caricare i dati da xml e loggarli sulla console
 - lab-09
 - lab-10
 - lab-83
+- lab-83-pug
+
+<!-- PUG / JADE -->
+### "pug-loader": "^2.4.0" + "pug": "^2.0.4",
+- lab-83-pug
+
 
 <!-- DEVTOOLS -->
 ### "webpack-dev-server": "^3.10.1",
@@ -82,6 +93,7 @@ utilizzato per caricare i dati da xml e loggarli sulla console
 - lab-04
 - lab-05
 - lab-83
+- lab-83-pug
 
 ## others dev-dependencies
 ###    "commitlint": "^8.2.0",

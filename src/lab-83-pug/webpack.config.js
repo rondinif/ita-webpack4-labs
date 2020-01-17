@@ -2,7 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const helpers = require('./node-helpers.js');
-const exampleId = 'lab-83'; // lab08 + lab03 ( see lab-83-pug for the pug variant )
+const exampleId = 'lab-83-pug'; // lab08 + lab03 + pug-loader
+
+const PATHS = {
+	src: path.join(__dirname, 'src'),
+	dist: path.join(__dirname, 'dist')
+};
+
+console.log(PATHS.src);
+console.log(PATHS.dist);
 
 
 module.exports = {
@@ -13,6 +21,12 @@ module.exports = {
   },
   module: {
       rules: [
+        {
+          test: /\.pug$/,
+          use: [
+            'pug-loader'
+          ]
+        },  
         {
           test: /\.css$/,
           use: [
@@ -38,7 +52,9 @@ module.exports = {
   plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: 'Output Management',
+        title: `${exampleId}`,
+        template: PATHS.src + '/views/index.pug',
+        inlineSource: '.(js|css)'
       }),
     ],  
   output: {
