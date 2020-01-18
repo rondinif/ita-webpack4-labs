@@ -1,4 +1,4 @@
-# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-83**: mix asset-management - fonts (lab03) con gestione dell'output - HtmlWebpackPlugin + CleanWebpackPlugin (lab08 )
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-83**: mix asset-management - fonts (lab-03) con gestione dell'output - HtmlWebpackPlugin + CleanWebpackPlugin (lab-08 )
 utilizzo dei "loaders" per impacchettare risorse (*to bundle assets*) come possono essere i **webfonts**.
 ## guida di riferimento
 - https://webpack.js.org/guides/asset-management/

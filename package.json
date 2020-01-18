@@ -6,7 +6,7 @@
   "author": "rondinif",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build-lab-01 && npm run build-lab-02a && npm run build-lab-02b && npm run build-lab-02c && npm run build-lab-03 && npm run build-lab-04 && npm run build-lab-05 && npm run build-lab-06 && npm run build-lab-07 && npm run build-lab-08 && npm run build-lab-09",
+    "build": "npm run build-lab-01 && npm run build-lab-02a && npm run build-lab-02b && npm run build-lab-02c && npm run build-lab-03 && npm run build-lab-04 && npm run build-lab-05 && npm run build-lab-06 && npm run build-lab-07 && npm run build-lab-08 && npm run build-lab-09 && build-lab-83-pug && build-lab-83-pug-adv-a",
     "ex01": "rm -rf dist/ex01; webpack-cli --config=./src/ex01/webpack.config-ex01.js --mode=development --output=dist/ex01/ex01.js --entry=./src/ex01/src/file.js",
     "build-lab-01": "rm -rf dist/lab-01; webpack-cli --config=./src/lab-01/webpack.config.js --mode=development",
     "build-lab-01-with-npx": "rm -rf dist/lab-01 & npx webpack --config src/lab-01/webpack.config.js --mode=development",
@@ -25,6 +25,9 @@
     "start-lab-11": "node ./src/lab-11/src/server.js",
     "build-lab-83": "npx webpack --config src/lab-83/webpack.config.js --mode=development",
     "build-lab-83-pug": "npx webpack --config src/lab-83-pug/webpack.config.js --mode=development",
+    "build-lab-83-pug-adv-a": "npx webpack --config src/lab-83-pug/webpack.config-advanced-a.js",
+    "start-lab-83-pug-adv-a": "webpack-dev-server --config src/lab-83-pug/webpack.config-advanced-a.js --mode=development",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

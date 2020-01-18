@@ -78,6 +78,7 @@ utilizzato per caricare i dati da xml e loggarli sulla console
 <!-- DEVTOOLS -->
 ### "webpack-dev-server": "^3.10.1",
 - lab-10
+- lab-83-pug (-adv-a)
 
 ### "webpack-dev-middleware": "^3.7.2",
 - lab-11
