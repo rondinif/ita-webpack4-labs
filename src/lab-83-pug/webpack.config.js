@@ -12,7 +12,6 @@ const PATHS = {
 console.log(PATHS.src);
 // console.log(PATHS.dist);
 
-
 module.exports = {
   entry: `./src/${exampleId}/src/index.js`,
   output: {
