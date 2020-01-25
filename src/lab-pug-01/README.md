@@ -1,8 +1,13 @@
-# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-83-pug**: mix asset-management - fonts (lab-03) con gestione dell'output - HtmlWebpackPlugin + CleanWebpackPlugin (lab-08 ) + pug
+<!-- 
+vedere anche: 
+- src/lab-83-pug/README-pug-notes.md
+- src/lab-83-pug/README-wds-issue.md
+-->
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-pug-01**: mix asset-management - fonts (lab-03) con gestione dell'output - HtmlWebpackPlugin + CleanWebpackPlugin (lab-08 ) + pug  
 utilizzo dei "loaders" per impacchettare risorse (*to bundle assets*) come possono essere i **webfonts**.
-- nella variante 'lab-83-pug-adv-a' si utilizza anche come nel "lab-10" ovvero si ha un ambiente di sviluppo dove funzionano le `source maps` con `webpack-dev-server`
++ caricamento **dati json** che in questo usiamo per recuperora lo stato della applicazione.
 
-
+- nella variante 'lab-pug-01-adv-a' si utilizza anche come nel "lab-10" ovvero si ha un ambiente di sviluppo dove funzionano le `source maps` con `webpack-dev-server`
 
 ## guide di riferimento 
 - https://webpack.js.org/guides/asset-management/
@@ -11,11 +16,12 @@ utilizzo dei "loaders" per impacchettare risorse (*to bundle assets*) come posso
 - https://webpack.js.org/configuration/dev-server/
 - https://github.com/pugjs/pug
 - https://github.com/pugjs/pug-loader
+- https://webpack.js.org/loaders/json-loader/
 
 ## caricare webfont
 i webfont di esempio <!-- possono essere caricati ad esempio da https://github.com/itgalaxy/webfont/tree/master/demo e --> vanno messi nella cartella `fonts`
 ``` bash
-cd <project-home>/src/lab-83-pug/src/fonts
+cd <project-home>/src/lab-pug-01/src/fonts
 cp -R <your-font/webfont-local-git-clone>/demo/ .
 ```
 <!-- TODO: descrivere ed integrare con @rondinif/phytojs-webfonts -->
@@ -27,15 +33,20 @@ grazie al plugin `clean-webpack-plugin` si manteniene pulita la cartella di dest
 notare che il `pug-loader` da solo non è sufficiente , occorre anche installare `pug` ( questo viene fatto automaticamente grazie al fatto che entrambi i package sono già compresi nel package.json) 
 
 
+## caricare lo stato "commited" della applicazione.
+daccordo con [questa risposta non usiamo ](https://stackoverflow.com/a/49373676)
+[json-loader](https://webpack.js.org/loaders/json-loader/) non serve.
+
+
 ## per eseguire la `build`
 nei task configurati in `package.json` sono stati predisposti questi esperimenti:
 ``` bash
-npm run build-lab-83-pug
+npm run build-lab-pug-01
 # possono esistere altre variant di qyesto laboratorio, per esempio 
 # per la variante 'adv-a' ( production ) utilizzare: 
-npm run build-lab-83-pug-adv-a
+npm run build-lab-pug-01-adv-a
 # per la variante adv-a ( development watch mode  ) utilizzare: 
-npm run start-lab-83-pug-adv-a
+npm run start-lab-pug-01-adv-a
 ```
 
 per i primi due esperimenti ( build-* ) occorre servire in http il progetto e navigare sulla pagina risultante dalla compilazione webpack, ovvero:  
@@ -45,7 +56,7 @@ python -m SimpleHTTPServer
 
 dal browser o su un altro terminare
 ``` bash
-open http://localhost:8000/dist/lab-83-pug/index.html
+open http://localhost:8000/dist/lab-pug-01/index.html
 ```
 
 nel caso di esperimenti che fanno partire il `webpack-dev-server` ( start-* ) occorre aprire il progetto alla pagina `http://localhost:8080/` come viene dichiarato nel sysout prodotto sulla console dallo stesso task.

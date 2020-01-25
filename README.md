@@ -20,11 +20,11 @@ laboratorio come si trattasse di sub-module ma viene fatta globalmente in quanto
 questo è un unico progetto strutturato in diversi laboratori 
 -->
 
-## note comuni per tutti gli esempi
+## note comuni per tutti i laboratori
 Come indice per accedere ai risultati generati nei diversi laboratori è stata predisposta la pagina 
-`index.html` nella home del progetto (<project-home>). 
+`index.html` nella `<project-home>` (cartella home in cui è presente il clone del progetto). 
 
-in qualche modo modo occorre servirla ed aprirla,
+in qualche modo modo occorre "servirla" ed "aprirla",
 per esempio:
 ``` bash 
 $ cd <project-home>
@@ -84,9 +84,12 @@ i laboratori [`lab-06`](https://github.com/rondinif/ita-webpack4-labs/tree/maste
 ### ambiente di sviluppo , "source maps", "development tools", "watch mode", etc..
 i laboratori [`lab-09`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-09), [`lab-10`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-10) e [`lab-11`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-11) contengono esempi che si inspirano al capitolo [development](https://webpack.js.org/guides/development/) della guida ufficiale.
 
+### mix di laboratori base e *templating* con **pug**
+-  [`lab-83-pug`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-83-pug)
+-  [`lab-pug-01`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-01),
 
 ## Contributing 
-Mi auguro che questo lavoro sia di tuo interesse, in ogni caso le tue idee sono importanti, non perdere l'occasione per fornire il tuo speciale contributo a questo repo.  
+Le tue idee sono importanti, non perdere l'occasione per fornire il tuo speciale contributo a questo repo.  
 
 Simply [we encourage contributions from everyone](https://github.com/rondinif/ita-webpack4-labs/blob/master/.github/CONTRIBUTING.md) , especially you.
 
