@@ -3,6 +3,7 @@ ita-webpack4-labs
 webpack4 learning studies and experiments with accompanying notes in Italian
 -->
 # ita-webpack4-labs
+![Node CI](https://github.com/rondinif/ita-webpack4-labs/workflows/Node%20CI/badge.svg?branch=master)
 <!-- Learning labs  with accompanying notes in Italian to dive into webpack4 eco-system -->
 Raccolta di laboratori per imparare e sperimemintare l'utilizzo di **webpack 4**, descritti e commentati in italiano.
 
