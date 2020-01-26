@@ -4,11 +4,9 @@ import './css/style.css';
 
 
 import Icon from './images/icon.png'
-import {getState, setState} from './lib/state.js'
-import commitedState from './store/commited-state.json'
+import {getState, getActions} from './lib/store.js'
+import {COUNT_UP, COUNT_DOWN} from './lib/actiontypes.js'
 
-const COUNT_UP = "COUNT_UP";
-const COUNT_DOWN = "COUNT_DOWN";
 
 // action creator functions 
 
@@ -30,38 +28,14 @@ function countDown(n) {
   };
 }
 
-// Reducer
-
-function reducer(state, action) {
-  actions.push(action)
-  switch (action.type) {
-    case COUNT_UP:
-      return { counter: state.counter + action.payload.increase };
-    case COUNT_DOWN:
-      return { counter: state.counter - action.payload.increase };
-    default:
-      return state
-  }
-}
-
-// State Store
-
-let state = {"counter":0}; // Initial state
-let actions = [];
-
-document.addEventListener('action', function(e) {
-    state = reducer(state, e.detail);
-    document.dispatchEvent(new CustomEvent('state'));
-}, false);
 
 // UI state change method
-
 function render() {
   let $counter = document.querySelector('#counter');
-  $counter.innerHTML = state.counter;
+  $counter.innerHTML = getState().counter;
   let $actions = document.querySelector('#actions');
   $actions.innerHTML = `we got ${actions.length} actions: <br/>`;
-  actions.forEach( action => { $actions.innerHTML += `action.type:${action.type}<span>${JSON.stringify(action.payload)}</span><br/>`; } );
+  getActions().forEach( action => { $actions.innerHTML += `action.type:${action.type}<span>${JSON.stringify(action.payload)}</span><br/>`; } );
 }
 
 document.addEventListener('state', render);
@@ -96,11 +70,5 @@ document.addEventListener('action', function(e) {
 });
 
 document.addEventListener('state', function(e) {
-    console.log("state changed", state);
+    console.log("state changed", getState());
 });
-
-
-
-
-
-
