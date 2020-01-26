@@ -1,0 +1,11 @@
+{
+    "tag": "rev1.0",
+    "state": {
+        "cards": [
+            { "id": "Q38859-1", "name": "basilico" },
+            { "id": "Q11678009-1", "name": "carota"},
+            { "id": "Q146212-1", "name": "cavolo capuccio"},
+            { "id": "Q50829171-1", "name": "cavolo cinese"}
+            ]
+        }
+}

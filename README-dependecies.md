@@ -1,7 +1,7 @@
-# Perchè abbiamo installato tutte queste dipendenze
+# Perchè questo progetto richiede di installare un tot di dipendenze
 
-nel corso dello sviluppo dei *laboratori* contenuti in questo repo 
-si è reso necessario installare diversi pacchetti ( che sono diventati "dipendenze" del progetto  ), come ad esempio:
+Nel corso dello sviluppo dei *laboratori* contenuti in questo repo 
+si è reso necessario installare diversi pacchetti ( "dipendenze" del progetto ), come ad esempio:
 ``` bash 
 npm install --save lodash
 npm install --save-dev style-loader css-loader
@@ -15,7 +15,7 @@ npm install --save-dev webpack-dev-server
 npm install --save-dev express webpack-dev-middleware
 npm install --save-dev express webpack-dev-middleware
 npm install --save-dev json-loader
-# lista ottenuta con: 
+# lista non completa ottenuta con: 
 #  history | grep 'npm install'
 ```
 quando il progetto viene scaricato sull'ambiente di sviluppo ( o di build ), 
@@ -46,6 +46,7 @@ Per uleriori informazioni leggere anche il README.md contenuto nella cartella de
 - lab-83
 - lab-83-pug 
 - lab-pug-01
+- lab-pug-02
 
 <!-- LOADERS -->
 
@@ -56,6 +57,7 @@ Per uleriori informazioni leggere anche il README.md contenuto nella cartella de
 - lab-83
 - lab-83-pug 
 - lab-pug-01
+- lab-pug-02
 
 ###     "style-loader": "^1.1.2",
 - lab-02
@@ -64,6 +66,7 @@ Per uleriori informazioni leggere anche il README.md contenuto nella cartella de
 - lab-83
 - lab-83-pug 
 - lab-pug-01
+- lab-pug-02
 
 ###     "file-loader": "^5.0.2",
 - lab-02
@@ -73,7 +76,7 @@ file loader viene utilizizzato per caricare nel pacchetto ( dist ) files binari 
 - lab-83
 - lab-83-pug 
 - lab-pug-01
-
+- lab-pug-02
 
 ###    "csv-loader": "^3.0.2",
 - lab-04 ( in realtà non è stato utilizzato )
@@ -81,9 +84,11 @@ file loader viene utilizizzato per caricare nel pacchetto ( dist ) files binari 
 - lab-04 
 utilizzato per caricare i dati da xml e loggarli sulla console
 
-###    "json-loader": "^0.5.7"
+###  /*  "json-loader": "^0.5.7" - NON SERVE*/
+NB: con webpack4 non serve il `json-loader` per caricare files json, 
+se stai cercando esercitazioni nelle quali venga caricato json a *build-time* puoi fare riferimento ai labs:
 - lab-pug-01
-utilizzato per recuperare lo stato "committato" della applicazione
+- lab-pug-02 
 
 ###    "apply-loader": "^2.0.0",
 ###    "pug-loader": "^2.4.0",
@@ -98,7 +103,7 @@ utilizzato per recuperare lo stato "committato" della applicazione
 - lab-83
 - lab-83-pug 
 - lab-pug-01
-
+- lab-pug-02
 
 ### "clean-webpack-plugin": "^3.0.0",
 - lab-08
@@ -107,12 +112,13 @@ utilizzato per recuperare lo stato "committato" della applicazione
 - lab-83
 - lab-83-pug 
 - lab-pug-01
+- lab-pug-02
 
 <!-- PUG / JADE -->
 ### "pug-loader": "^2.4.0" + "pug": "^2.0.4",
 - lab-83-pug 
 - lab-pug-01
-
+- lab-pug-02
 
 <!-- DEVTOOLS -->
 ### "webpack-dev-server": "^3.10.1",
@@ -137,6 +143,11 @@ utilizzato per recuperare lo stato "committato" della applicazione
 - lab-83
 - lab-83-pug 
 - lab-pug-01
+- lab-pug-02
 
 ## others dev-dependencies
 ###    "commitlint": "^8.2.0",
+migliora i processi di *ci/cd* mantenendo uniforme lo stile dei messaggi di commit, vedi anche 
+- [husky - git hooks made easy ](https://github.com/typicode/husky) 
+- [commitlint -  lint commit messages ](https://github.com/conventional-changelog/commitlint) 
+- [slides circa i vantaggi di usare *convenzioni* anche per i messaggi di commit - by Mario Nebl](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/10)
