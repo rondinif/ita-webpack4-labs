@@ -1,0 +1,81 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 10%;
+  background-color: black;
+  color: white;
+}
+a {
+  color: yellowgreen;
+}
+.hello {
+  height: 64px;
+  color: rgb(255, 174, 0);
+  font-family: "WebFont";
+  font-size: 64px;
+  font-weight: bold;
+  background: url("./../images/icon.png");
+}
+
+.footer {
+  border-top-color: azure;
+  border-top-style: dotted;
+  border-bottom-color: azure;
+  border-bottom: dotted;
+  margin-bottom: 1em;
+}
+
+#actions {
+  height: 100px;
+  overflow-y: scroll;
+} 
+
+#dinamico {
+    color: orange;
+    font-size: 1em;
+    border: dotted green;
+    background: darkgreen;
+}
+
+#Q11678009-1 {
+  /* Carrot */
+  color: orange;
+}
+
+#Q146212-1 {
+  /* Cabbage'*/
+  color: blueviolet;
+}
+
+#Q50829171-1 {
+  /* Chinese cabbage */
+  color: palegreen;
+}
+
+#Q38859-1 {
+  /* Basil */
+  color: greenyellow;
+}
+
+#Q134283-1 {
+  /* Oregano */
+  color: olivedrab;
+}
+
+#Q9031561-1 {
+  /* Pippermint */
+  color: green;
+}
+
+@media screen and (max-width: 400px) and (prefers-color-scheme: light) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+
+@media screen and (max-min-width: 401px) and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}
