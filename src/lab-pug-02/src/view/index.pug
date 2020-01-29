@@ -3,9 +3,10 @@ extends ../layout/layout.pug
 block content  
   h1= locals.config.title
   include ../mixin/card.pug
-  
-  ul
-  each card in locals.state.cards
-    +show(card)
+
+  ul#csr_cardlist
+  ul#ssr_cardlist
+    each card in locals.state.cards
+      +show(card)
 
   include balcony.pug

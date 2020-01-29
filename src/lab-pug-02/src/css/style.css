@@ -36,36 +36,6 @@ a {
     background: darkgreen;
 }
 
-#Q11678009-1 {
-  /* Carrot */
-  color: orange;
-}
-
-#Q146212-1 {
-  /* Cabbage'*/
-  color: blueviolet;
-}
-
-#Q50829171-1 {
-  /* Chinese cabbage */
-  color: palegreen;
-}
-
-#Q38859-1 {
-  /* Basil */
-  color: greenyellow;
-}
-
-#Q134283-1 {
-  /* Oregano */
-  color: olivedrab;
-}
-
-#Q9031561-1 {
-  /* Pippermint */
-  color: green;
-}
-
 @media screen and (max-width: 400px) and (prefers-color-scheme: light) {
   body {
     background-color: black;

@@ -2,11 +2,9 @@ import './css/webfont.css';
 import './css/pulsantiera.css';
 import './css/style.css';
 
-
 import Icon from './images/icon.png'
 import {getState, setState} from './lib/state.js'
 import commitedState from './store/commited-state.json'
-
 
 function componentImage() {
     const element = document.createElement('div');

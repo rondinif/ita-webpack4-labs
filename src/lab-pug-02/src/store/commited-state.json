@@ -1,6 +1,9 @@
 {
     "tag": "rev1.0",
     "state": {
-        "counter": 15
-    }
+        "cards": [
+            { "id": "Q38859-1", "name": "basilico", "type": "Q38859"},
+            { "id": "Q11678009-1", "name": "carota", "type": "Q11678009"}
+            ]
+        }
 }
