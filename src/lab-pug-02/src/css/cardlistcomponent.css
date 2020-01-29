@@ -1,0 +1,44 @@
+#csr_cardlist {
+    display: hidden;
+    border-radius: 15%;
+    border-style: hidden;
+    border-color: lightyellow;
+}
+
+#ssr_cardlist {    
+    border-radius: 15%;
+    border-style: solid;
+    border-color: lightseagreen;
+}
+
+/* plant's entityId class styles */
+
+.Q11678009 {
+    /* Carrot */
+    color: orange;
+  }
+  
+.Q146212 {
+/* Cabbage'*/
+color: blueviolet;
+}
+
+.Q50829171 {
+/* Chinese cabbage */
+color: palegreen;
+}
+
+.Q38859 {
+/* Basil */
+color: greenyellow;
+}
+
+.Q134283 {
+/* Oregano */
+color: olivedrab;
+}
+
+.Q9031561 {
+/* Pippermint */
+color: green;
+}

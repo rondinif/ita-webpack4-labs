@@ -11,6 +11,14 @@
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}/dist/lab-10",
             "sourceMaps": true
-        }
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "debug-pug-02",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/dist/lab-pug-02-adv-a",
+            "sourceMaps": true
+        }        
     ]
 }
