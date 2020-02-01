@@ -1,5 +1,6 @@
 
 craft a better state management architecture
+
 implented with no framework at all
 
 is stated that Redux combines the ideas from:
