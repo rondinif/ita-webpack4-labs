@@ -16,7 +16,7 @@ npm install --save-dev express webpack-dev-middleware
 npm install --save-dev express webpack-dev-middleware
 npm install --save-dev json-loader
 # lista non completa ottenuta con: 
-#  history | grep 'npm install'
+# history | grep 'npm install'
 ```
 quando il progetto viene scaricato sull'ambiente di sviluppo ( o di build ), 
 ad esempio clonand il repo con `git clone 
