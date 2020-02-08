@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+  - this.console.log('a trace form index.pug [')
+  - console.log(this["HTML_WEBPACK_PLUGIN"])
+  - this.console.log('a trace form index.pug ]')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title= 'index.pug'
+  body
+    h3 process.env
+    .debug!= JSON.stringify(process.env)
+    h3 locals.foo()
+    .debug!= locals.foo()
+    h3 locals
+    .debug!= JSON.stringify(locals)
+    h3 this
+    .debug!= JSON.stringify(Object.getOwnPropertyNames(this))
+    h3 global
+    .debug!= JSON.stringify(Object.getOwnPropertyNames(this.global))
+    h3 HTML_WEBPACK_PLUGIN keys
+    .debug!= JSON.stringify(Object.keys(this.HTML_WEBPACK_PLUGIN))      
+    h3 this.globalThis keys:
+    .debug!= JSON.stringify(Object.keys(this.globalThis))      
+    h3 global["GLOBAL"]
+    .debug!= JSON.stringify(Object.getOwnPropertyNames(this.global["GLOBAL"]))
+    h3 global["root"]
+    .debug!= JSON.stringify(Object.getOwnPropertyNames(this.global["root"]))

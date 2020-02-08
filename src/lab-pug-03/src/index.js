@@ -1,0 +1,1 @@
+console.log('this trace run on the browser by src/lab-pug-03/src/index-debug.js');

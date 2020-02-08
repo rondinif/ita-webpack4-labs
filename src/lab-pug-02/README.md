@@ -5,8 +5,8 @@ vedere anche:
 -->
 # [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-pug-02**: mix asset-management - fonts (lab-03) con gestione dell'output - HtmlWebpackPlugin + CleanWebpackPlugin (lab-08 ) + pug  
 utilizzo dei "loaders" per impacchettare risorse (*to bundle assets*) come possono essere i **webfonts**.
-+ caricamento **dati json** che in questo usiamo per recuperora lo stato della applicazione.
-+ esempio di architettura uniderezionale implenata in vanilla js 
++ caricamento **dati json** che in questo usiamo per recuperare lo stato della applicazione.
++ esempio di "architettura uniderezionale" implementata in javascript senza ricorre a specifici  frameworks o toolkits ( Vanilla JS ). 
 
 - nella variante 'lab-pug-02-adv-a' si utilizza anche come nel "lab-10" ovvero si ha un ambiente di sviluppo dove funzionano le `source maps` con `webpack-dev-server`
 
@@ -102,5 +102,4 @@ vedi anche:
 
 ## altri riferimenti 
 - https://github.com/webpack/docs/wiki/webpack-dev-server
-- https://docs.renovatebot.com
 - https://webpack.js.org/configuration/output/#outputpublicpath

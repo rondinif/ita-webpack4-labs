@@ -14,8 +14,8 @@ npm install --save-dev html-webpack-plugin
 npm install --save-dev webpack-dev-server
 npm install --save-dev express webpack-dev-middleware
 npm install --save-dev express webpack-dev-middleware
-npm install --save-dev json-loader
-# lista non completa ottenuta con: 
+npm install --save-dev dotenv-flow-webpack
+# lista non esaustiva ottenuta con: 
 # history | grep 'npm install'
 ```
 quando il progetto viene scaricato sull'ambiente di sviluppo ( o di build ), 
@@ -47,6 +47,7 @@ Per uleriori informazioni leggere anche il README.md contenuto nella cartella de
 - lab-83-pug 
 - lab-pug-01
 - lab-pug-02
+- lab-pug-03
 
 <!-- LOADERS -->
 
@@ -88,10 +89,16 @@ utilizzato per caricare i dati da xml e loggarli sulla console
 NB: con webpack4 non serve il `json-loader` per caricare files json, 
 se stai cercando esercitazioni nelle quali venga caricato json a *build-time* puoi fare riferimento ai labs:
 - lab-pug-01
-- lab-pug-02 
+- lab-pug-02
+- lab-pug-03 
 
 ###    "apply-loader": "^2.0.0",
-###    "pug-loader": "^2.4.0",
+<!-- PUG / JADE -->
+### "pug-loader": "^2.4.0" + "pug": "^2.0.4",
+- lab-83-pug 
+- lab-pug-01
+- lab-pug-02
+- lab-pug-03
 
 <!-- PLUGINS -->
 
@@ -113,18 +120,17 @@ se stai cercando esercitazioni nelle quali venga caricato json a *build-time* pu
 - lab-83-pug 
 - lab-pug-01
 - lab-pug-02
+- lab-pug-03
 
-<!-- PUG / JADE -->
-### "pug-loader": "^2.4.0" + "pug": "^2.0.4",
-- lab-83-pug 
-- lab-pug-01
-- lab-pug-02
+### dotenv-flow-webpack: "^1.0.0",
+- lab-pug-03
 
 <!-- DEVTOOLS -->
 ### "webpack-dev-server": "^3.10.1",
 - lab-10
 - lab-83-pug 
 - lab-pug-01 (-adv-a)
+- lab-pug-02 (-adv-a)
 
 ### "webpack-dev-middleware": "^3.7.2",
 - lab-11
@@ -143,9 +149,9 @@ se stai cercando esercitazioni nelle quali venga caricato json a *build-time* pu
 - lab-83
 - lab-83-pug 
 - lab-pug-01
-- lab-pug-02
+<!-- - lab-pug-02  ?? controllare -->
 
-## others dev-dependencies
+## altre dev-dependencies
 ###    "commitlint": "^8.2.0",
 migliora i processi di *ci/cd* mantenendo uniforme lo stile dei messaggi di commit, vedi anche 
 - [husky - git hooks made easy ](https://github.com/typicode/husky) 
