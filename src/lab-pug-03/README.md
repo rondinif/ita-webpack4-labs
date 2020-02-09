@@ -43,9 +43,50 @@ vedi: `src/lab-pug-02/webpack.config.js`
 ## configurazione (ambientalizzazione) del processo di build e  paccheticazione
 
 ## caricamento di dati esterni
-nel [lab-pug-02](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-02) abbiamo visto come **caricare lo stato "commited" della applicazione** ....TODO confrontare caricaemnto dati da usare nel JS client side VS caricare dati che servono nel SSR
+Nel [lab-pug-02](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-02) abbiamo visto come **caricare "client-side" lo stato "commited" della applicazione**.
+Nel [lab-pug-03] vediamo diversi metodi per passare dati al processo di *build e pacchettizzazione* che possiamo considerare come forma di SSR ( server sider rendering); 
+
+Notare che quello che proviamo qui è un SSR che avviene una sola volta a tempo di build e non ad ogni chiamata del client verso il server come potrebbe accadere in una applicazione basata su Express o un altro server capace di produrre output dinamico.
+
+### Passaggio di dati per la renderizzazione tramite `HtmlWebpackPlugin` `templateParameters`
+
+osservare in `src/lab-pug-03/webpack.config.js` : 
+``` js
+      new HtmlWebpackPlugin({
+        title: `${exampleId}`,
+        template: PATHS.src + '/index.pug',
+        inlineSource: '.(js|css)',
+        templateParameters: {
+          foo: () => 'bar',
+          some: 'value'
+        }
+      })
+```
+nel `lab-pug-03` si dimostra come i dati passati nel `templateParameters` 
+siano disponibili per `index.pug` tramite la variabile `locals`:
+``` jade
+    h3 locals
+    .debug!= JSON.stringify(locals)
+```
+viene renderizzato come 
+``` html
+    <h3>locals</h3>
+    <div class="debug">{"some":"value"}</div>
+```
+anche le funzioni definite nei `templateParameters` possono restitituire valori renderizzabili, 
+nell'esempio presente in `index.pug` osservare come :
+``` jade
+    h3 locals.foo()
+    .debug!= locals.foo() 
+```
+venga renderizzato come: 
+``` html
+    <h3>locals.foo()</h3>
+    <div class="debug">bar</div>
+```
+
 <|-- 
-### interfacciaemnto a contesti esterni per ..
+### interfacciamento a contesti esterni per ..
 -->
 ## debugging del processo di build e paccheticazione ( webpack e relativi loaders e plugins )
 vedi la documentazione in [README-trouble.md](../README-trouble.md) per informazioni più complete sul debug.

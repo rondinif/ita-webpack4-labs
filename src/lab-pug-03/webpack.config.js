@@ -3,7 +3,7 @@ const DotenvFlow = require('dotenv-flow-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const helpers = require('./node-helpers.js');
-const exampleId = 'lab-pug-03'; // same as lab-pug-03 ( lab08 + lab03 + pug-loader )
+const exampleId = 'lab-pug-03';
 
 const PATHS = {
 	src: path.join(__dirname, 'src'),
@@ -26,7 +26,7 @@ module.exports = {
           use: [{
             loader: 'pug-loader',
             query: { doctype: 'pug', globals: {hello: 'ronda'}}
-            /*            options: {
+            /*  options: {
               data: {
                 hello: 'Hello World',
                 getUsername: function() {
@@ -48,33 +48,15 @@ module.exports = {
 						]},*/
 					}]
         } 
-        /* 
-        ,  
-        {
-          test: /\.css$/,
-          use: [
-            'style-loader',
-            'css-loader',
-          ],
-
-        },
-        {
-          test: /\.(png|svg|jpg|gif)$/,
-          use: [
-            `file-loader?name=assets/[name].[hash].[ext]&outputPath=../../dist/${exampleId}`
-          ]
-        },        
-        {
-          test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: [
-            `file-loader?outputPath=../../dist/${exampleId}`,
-          ],
-        }, 
-        */
       ],
     },
   plugins: [
-      new DotenvFlow(),
+      new DotenvFlow({
+        default_node_env: 'development',
+        path: `./src/${exampleId}/config`,
+        system_vars: true,
+        silent: false
+      }),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: `${exampleId}`,
