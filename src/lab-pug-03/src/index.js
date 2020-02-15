@@ -6,3 +6,8 @@ else {
     console.log('We are in production!');
 }
 console.log(`process.env:\n${JSON.stringify(process.env)}`);
+console.log( process.env.PHYTOJS_API_SERVICE_URL );
+console.log("---------------------");
+let $api = document.querySelector('#api');
+$api.innerHTML =  process.env.PHYTOJS_API_SERVICE_URL;
+

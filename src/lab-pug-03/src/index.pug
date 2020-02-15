@@ -9,6 +9,8 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     title= 'index.pug'
   body
+    h3 PHYTOJS_API_SERVICE_URL
+    .debug#api!= process.env.PHYTOJS_API_SERVICE_URL
     h3 process.env
     .debug!= JSON.stringify(process.env)
     h3 locals.foo()
