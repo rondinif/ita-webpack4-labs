@@ -1,0 +1,49 @@
+{
+    "tag": "rev1.0",
+    "state": {
+        "groups": [
+            {
+                "group": "intro",
+                "labs": [
+                    {
+                        "id": "lab-01",
+                        "name": "lab-01",
+                        "pages": [
+                            {
+                                "topic": "lab-01-unboundled",
+                                "description": "cominciamo senza un pacchetto"
+                            },
+                            {
+                                "topic": "lab-01: ",
+                                "description": "impacchettamento del javascript (<em></em>bundling js files<em>)</em></a>"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "group": "asset-management",
+                "labs": [
+                    {
+                        "id": "lab-02",
+                        "name": "lab-02",
+                        "pages": [
+                            {
+                                "topic": "lab-02a",
+                                "description": "utilizzo dei \"loaders\" per impacchettare risorse (<em>to bundle assets</em>) come stili css e immagini png, icone etc.</a>: url-loader</li>"
+                            },
+                            {
+                                "topic": "lab-02b",
+                                "description": "utilizzo dei \"loaders\" per impacchettare risorse (<em>to bundle assets</em>) come stili css e immagini png, icone etc.</a>: file-loader [1]</li>"
+                            },
+                            {
+                                "topic": "lab-02c",
+                                "description": "utilizzo dei \"loaders\" per impacchettare risorse (<em>to bundle assets</em>) come stili css e immagini png, icone etc.</a>: file-loader [2]</li>"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
