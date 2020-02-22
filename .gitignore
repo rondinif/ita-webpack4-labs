@@ -1,6 +1,6 @@
 private
 private*
-
+src/docs/config/.env.*
 
 # Logs
 logs
