@@ -8,6 +8,8 @@ jobs:
   debug:
     runs-on: ubuntu-18.04
     steps:
+    - uses: actions/checkout@v1
+      name: Checkout
     - uses: ./.github/actions/my-debug-action
       with:
         who-to-greet: 'rondinif'
