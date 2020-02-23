@@ -1,0 +1,13 @@
+name: MyTest
+
+on:
+    issue_comment:
+      types: [created, edited, deleted]
+
+jobs:
+  debug:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: ./.github/actions/my-debug-action
+      with:
+        who-to-greet: 'rondinif'
