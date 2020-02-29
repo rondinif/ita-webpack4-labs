@@ -1,3 +1,7 @@
+// preparazione 
+include ./store/commited-state.pug
++load()
+// pagina
 doctype html
 html(lang='en')
   head
@@ -7,4 +11,11 @@ html(lang='en')
     title= 'index.pug'
   body
     h1 ita-webpack4-labs
+    include ./mixin/lab.pug
+
+    ul#csr_lablist
+    ul#ssr_lablist
+      each lab in locals.state.labs
+        +show(lab)
+
     .debug#website!= process.env.WEB_SITE_URL
