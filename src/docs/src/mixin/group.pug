@@ -1,0 +1,7 @@
+include ./lab.pug
+mixin showgroup(group)
+  .group(id=group.groupid)
+    ul(class = "ul_csr_group", id="csr_lablist_" + group.groupid)
+    ul(class = "ul_ssr_group", id="ssr_lablist_" + group.groupid)
+      each lab in group.labs
+        +showlab(lab)
