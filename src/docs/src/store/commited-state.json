@@ -43,7 +43,43 @@
                         ]
                     }
                 ]
+            },
+            {
+                "groupid": "output-management",
+                "labs": [
+                    {
+                        "id": "lab-06",
+                        "name": "output-management: endpoint multipli",
+                        "pages": [
+                            {
+                                "topic": "lab-06",
+                                "description": "gestione dell'output: endpoint multipli"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "lab-07",
+                        "name": "output-management: HtmlWebpackPlugin",
+                        "pages": [
+                            {
+                                "topic": "lab-07",
+                                "description": "gestione dell'output: HtmlWebpackPlugin"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "lab-08",
+                        "name": "output-management: HtmlWebpackPlugin + CleanWebpackPlugin",
+                        "pages": [
+                            {
+                                "topic": "lab-08",
+                                "description": "gestione dell'output: HtmlWebpackPlugin + CleanWebpackPlugin"
+                            }
+                        ]
+                    }
+                ]
             }
+
         ]
     }
 }
