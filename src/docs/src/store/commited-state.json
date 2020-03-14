@@ -45,6 +45,21 @@
                 ]
             },
             {
+                "group": "@rondinif/phytojs-webfont",
+                "labs": [
+                    {
+                        "id": "lab-03",
+                        "name": "lab-03",
+                        "pages": [
+                            {
+                                "topic": "lab-03",
+                                "description": "utilizzo dei \"loaders\" per impacchettare risorse (<em>to bundle assets</em>) come fonts</a>: url-loader</li>"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
                 "groupid": "output-management",
                 "labs": [
                     {
