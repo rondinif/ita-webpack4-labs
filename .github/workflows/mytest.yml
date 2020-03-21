@@ -4,10 +4,32 @@ on:
     issue_comment:
       types: [created, edited, deleted]
 
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+
 jobs:
   debug:
     runs-on: ubuntu-18.04
     steps:
-    - uses: ./.github/actions/my-debug-action
+    - uses: actions/checkout@v2
+      with:
+        ref: docs
+        persist-credentials: false
+    
+    - name: Create local changes
+      uses: ./.github/actions/my-debug-action
       with:
         who-to-greet: 'rondinif'
+
+    - name: Commit files
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git commit -a -m 'Automated rondinif my-debug-action update'
+        Co-authored-by: ${{ github.event.comment.user.login }} <${{ github.event.comment.user.id }}+${{ github.event.comment.user.login }}@users.noreply.github.com>'
+    # @see github-push-action/action.yml
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: docs
