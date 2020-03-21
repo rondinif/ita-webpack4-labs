@@ -1,0 +1,7 @@
+include ./page.pug
+
+mixin showlab(lab)
+ li.lab(id=lab.id)
+    a(href="https://github.com/rondinif/ita-webpack4-labs/blob/master/src/"+lab.id+"/README.md") #{lab.id}:#{lab.name}
+    each page in lab.pages
+      +showpage(page)

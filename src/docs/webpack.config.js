@@ -27,7 +27,14 @@ module.exports = {
             loader: 'pug-loader',
             query: { doctype: 'pug', globals: {hello: 'ronda'}}
 					}]
-        } 
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader',
+          ],
+        }
       ],
     },
   plugins: [

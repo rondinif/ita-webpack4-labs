@@ -1,0 +1,43 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 10%;
+    background-color: black;
+    color: white;
+  }
+.debug {
+    display: none;
+}
+
+/* mixin/group.pug */
+.group {
+    border: 2px solid yellowgreen;
+    border-radius: 50px 20px;
+    margin: 25px 50px 10px 10px;
+}
+
+.ul_csr_group
+.ul_ssr_group {
+    list-style-type: upper-roman;
+}
+
+/* mixin/lab.pug */
+li.lab {
+    list-style-type: circle;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+a {
+    color: yellowgreen;
+}
+
+/* mixin/page.pug */ 
+.page {
+    list-style: square; 
+}
+.page-description {
+    color: rgb(255, 174, 0);
+}
+

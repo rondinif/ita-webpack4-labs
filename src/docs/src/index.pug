@@ -1,3 +1,5 @@
+include ./store/commited-state.pug
++load()
 doctype html
 html(lang='en')
   head
@@ -7,4 +9,11 @@ html(lang='en')
     title= 'index.pug'
   body
     h1 ita-webpack4-labs
+    include ./mixin/group.pug
+
+    ul#csr_lablist
+    ul#ssr_lablist
+      each group in locals.committed.state.groups
+        +showgroup(group)
+
     .debug#website!= process.env.WEB_SITE_URL
