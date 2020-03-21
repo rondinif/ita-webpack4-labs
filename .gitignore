@@ -2,6 +2,7 @@ private
 private*
 src/docs/config/.env.*
 
+
 # Logs
 logs
 *.log
@@ -106,3 +107,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Custom Actions
+!.github/actions/my-debug-action/node_modules
+!.github/actions/my-debug-action/dist
