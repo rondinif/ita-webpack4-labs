@@ -442,7 +442,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var isPlainObject = _interopDefault(__webpack_require__(256));
-var universalUserAgent = __webpack_require__(208);
+var universalUserAgent = __webpack_require__(425);
 
 function lowercaseKeys(object) {
   if (!object) {
