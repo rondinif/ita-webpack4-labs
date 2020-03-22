@@ -1,7 +1,13 @@
 # my debug action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-Then prints other informations for debugging purposes
+This action is for experimental purpose only
+The status of the action is "UNDER DEVELOPMENT"
+Please do not use in production. 
+
+1. The action greets `who-to-greet` ( it's a way to test that it can recevive `input parameter` ), 
+1. The action prints other informations for debugging purposes, 
+1. The action use information provided by the issue comment received as an event
+and when possible make an automatic changes the sources of the project
 
 ## Inputs
 
@@ -18,7 +24,8 @@ The time we greeted you.
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-javascript-action@master
-with:
-  who-to-greet: 'Mona the Octocat'
+    - name: Create local changes
+      uses: ./.github/actions/my-debug-action
+      with:
+        who-to-greet: 'rondinif'
 ```

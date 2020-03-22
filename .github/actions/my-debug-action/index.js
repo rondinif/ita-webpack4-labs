@@ -16,13 +16,13 @@ function getStringFromArraByRegex(ar, re) {
   return result
 }
 
-function getGroupId(ar) {
-  let re = /.*group-id: (.*)/gm;
+function getTest(ar) {
+  let re = /.*test: (.*)/gm;
   return getStringFromArraByRegex(ar, re)
 }
 
-function getGroupName(ar) {
-  let re = /.*group-name: (.*)/gm;
+function getGroupId(ar) {
+  let re = /.*group-id: (.*)/gm;
   return getStringFromArraByRegex(ar, re)
 }
 
@@ -81,70 +81,89 @@ try {
         // the lab in the issue to merge into the committet state
         let rawdata = fs.readFileSync(`${process.env['GITHUB_WORKSPACE']}/src/docs/src/store/commited-state.json`);
         let commited = JSON.parse(rawdata);;
-        let nextCommitedState = {
-          tag: commited.tag + '.' + github.context.payload.comment.id,
-          state: {
-            groups: [{
-              id: getGroupId(arBody),
-              labs: [{
-                id: getLabId(arBody),
-                name: getLabName(arBody),
-                pages: [
-                  {
-                    topic: getPageTopic(arBody),
-                    description: getPageDescription(arBody)
-                  }
-                ]
+
+        // check if we have everything we need to proceed
+        let ck = Boolean(commited.tag);
+        ck = ck && Boolean(getGroupId(arBody));
+        ck = ck && Boolean(getLabId(arBody));
+        ck = ck && Boolean(getLabName(arBody));
+        ck = ck && Boolean(getPageTopic(arBody));
+        ck = ck && Boolean(getPageDescription(arBody));
+
+        if (ck) {
+
+          let nextCommitedState = {
+            tag: commited.tag + '.' + github.context.payload.comment.id,
+            state: {
+              groups: [{
+                id: getGroupId(arBody),
+                labs: [{
+                  id: getLabId(arBody),
+                  name: getLabName(arBody),
+                  pages: [
+                    {
+                      topic: getPageTopic(arBody),
+                      description: getPageDescription(arBody)
+                    }
+                  ]
+                }]
               }]
-            }]
-          }
-        }
-        commited.state.tag = nextCommitedState.tag;
-
-        let groups = commited.state.groups.filter((g) => g.groupid == getGroupId(arBody));
-        if (groups.length > 0) { // edit group
-          console.log('##[new-commited-state:[EDIT GROUP]:');
-          const groupIndex = findWithAttr(groups, 'groupid', getGroupId(arBody));
-          const labs = groups[0].labs.filter((l) => l.id == getLabId(arBody));
-          if (labs.length > 0) { // edit lab            
-            console.log('##[new-commited-state:[EDIT LAB]:');
-            const labIndex = findWithAttr(labs, 'id', getLabId(arBody));
-            const pages = labs[0].pages.filter((p) => p.topic == getPageTopic(arBody));
-            if (pages.length > 0) { // edit page
-              console.log('##[new-commited-state:[EDIT PAGETOPIC]:');
-              const pageIndex = findWithAttr(pages, 'topic', getPageTopic(arBody));
-              commited.state.groups[groupIndex].labs[labIndex].name = nextCommitedState.state.groups[0].labs[0].name;
-              commited.state.groups[groupIndex].labs[labIndex].pages[pageIndex] = nextCommitedState.state.groups[0].labs[0].pages[0];
-            }
-            else { // new page topic              
-              console.log('##[new-commited-state:[ADD PAGETOPIC]:');
-              commited.state.groups[groupIndex].labs[labIndex].name = nextCommitedState.state.groups[0].labs[0].name;
-              commited.state.groups[groupIndex].labs[labIndex].pages.push(nextCommitedState.state.groups[0].labs[0].pages[0]);
             }
           }
-          else { // new lab
-            console.log('##[new-commited-state:[ADD LAB]:');
-            commited.state.groups[groupIndex].labs.push(nextCommitedState.state.groups[0].labs[0]);
+          commited.state.tag = nextCommitedState.tag;
+
+          let groups = commited.state.groups.filter((g) => g.groupid == getGroupId(arBody));
+          if (groups.length > 0) { // edit group
+            console.log('##[new-commited-state:[EDIT GROUP]:');
+            const groupIndex = findWithAttr(groups, 'groupid', getGroupId(arBody));
+            const labs = groups[0].labs.filter((l) => l.id == getLabId(arBody));
+            if (labs.length > 0) { // edit lab            
+              console.log('##[new-commited-state:[EDIT LAB]:');
+              const labIndex = findWithAttr(labs, 'id', getLabId(arBody));
+              const pages = labs[0].pages.filter((p) => p.topic == getPageTopic(arBody));
+              if (pages.length > 0) { // edit page
+                console.log('##[new-commited-state:[EDIT PAGETOPIC]:');
+                const pageIndex = findWithAttr(pages, 'topic', getPageTopic(arBody));
+                commited.state.groups[groupIndex].labs[labIndex].name = nextCommitedState.state.groups[0].labs[0].name;
+                commited.state.groups[groupIndex].labs[labIndex].pages[pageIndex] = nextCommitedState.state.groups[0].labs[0].pages[0];
+              }
+              else { // new page topic              
+                console.log('##[new-commited-state:[ADD PAGETOPIC]:');
+                commited.state.groups[groupIndex].labs[labIndex].name = nextCommitedState.state.groups[0].labs[0].name;
+                commited.state.groups[groupIndex].labs[labIndex].pages.push(nextCommitedState.state.groups[0].labs[0].pages[0]);
+              }
+            }
+            else { // new lab
+              console.log('##[new-commited-state:[ADD LAB]:');
+              commited.state.groups[groupIndex].labs.push(nextCommitedState.state.groups[0].labs[0]);
+            }
           }
+          else { // new group 
+            console.log('##[new-commited-state:[ADD GROUP]:');
+            commited.state.groups.push(nextCommitedState.state.groups[0].labs[0]);
+          }
+
+          console.log('-------------------------------------------------');
+          console.log(JSON.stringify(commited));
+          console.log('-------------------------------------------------');
+          // fs.writeFileSync overwrite the file by default, there is no need for extra checks
+          fs.writeFileSync(
+              `${process.env['GITHUB_WORKSPACE']}/src/docs/src/store/commited-state.json`,
+              JSON.stringify(commited));
+
+          var objStr = JSON.stringify(commited).replace(/\"([^(\")"]+)\":/g, "$1:");
+          console.log('-------------------------------------------------');
+          console.log(`mixin load() \n  - locals.committed = ${objStr}`);
+          console.log('-------------------------------------------------');
+          // fs.writeFileSync overwrite the file by default, there is no need for extra checks
+          fs.writeFileSync(
+            `${process.env['GITHUB_WORKSPACE']}/src/docs/src/store/commited-state.pug`,
+            `mixin load() \n  - locals.committed = ${objStr}`);
+
         }
-        else { // new group 
-          console.log('##[new-commited-state:[ADD GROUP]:');
-          commited.state.groups.push(nextCommitedState.state.groups[0].labs[0]);
+        else {
+          console.log("CHECK-FAILS comment message and commited state validation rules prevents to continue");
         }
-
-        console.log('-------------------------------------------------');
-        console.log(JSON.stringify(commited));
-        console.log('-------------------------------------------------');
-
-        var objStr = JSON.stringify(commited).replace(/\"([^(\")"]+)\":/g, "$1:");
-        console.log('-------------------------------------------------');
-        console.log('mixin load() \n  - locals.committed = ' + objStr);
-        console.log('-------------------------------------------------');
-
-
-        /* TODO
-        scrivere i nuovi file scommites
-        */
       }
       else {
         console.log("NOTHING TODO because of the issue is not **open**");
