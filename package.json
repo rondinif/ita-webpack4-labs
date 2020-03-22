@@ -40,6 +40,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "minimist": ">=1.2.2",
+    "acorn": ">=5.7.4",
     "apply-loader": "^2.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "commitlint": "^8.2.0",
