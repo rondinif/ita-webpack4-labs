@@ -1,4 +1,4 @@
-name: MyTest
+name: MyAutomaticChangeOfCommiteStateByIssueComment
 
 on:
     issue_comment:
