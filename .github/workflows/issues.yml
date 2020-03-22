@@ -17,7 +17,7 @@ jobs:
         persist-credentials: false
     
     - name: Create local changes
-      uses: ./.github/actions/my-debug-action
+      uses: ./.github/actions/rf-automatic-change-committed-state-action
       with:
         who-to-greet: 'rondinif'
 
@@ -25,7 +25,7 @@ jobs:
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git commit -a -m 'Automated rondinif my-debug-action update Co-authored-by: ${{ github.event.comment.user.login }} <${{ github.event.comment.user.id }}+${{ github.event.comment.user.login }}@users.noreply.github.com>'
+        git commit -a -m 'rf-automatic-change-committed-state-action co-authored by: ${{ github.event.comment.user.login }} <${{ github.event.comment.user.id }}+${{ github.event.comment.user.login }}@users.noreply.github.com>'
     # @see github-push-action/action.yml
     - name: Push changes
       uses: ad-m/github-push-action@master
