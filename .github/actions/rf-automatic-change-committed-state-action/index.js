@@ -65,7 +65,7 @@ try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
   // FR: 
-  if (github.context.payload.issue.title == 'testing issue') {
+  if (github.context.payload.issue.title == 'rondinif\'s bot for automatic change of the commited state') {
     if (github.context.payload.comment.user.login == process.env['INPUT_WHO-TO-GREET']) {
       if (github.context.payload.issue.state == 'open') {
         const body = github.context.payload.comment.body;
@@ -174,7 +174,7 @@ try {
     }
   }
   else {
-    console.log("NOTHING TODO because of this is not a testing issue");
+    console.log("NOTHING TODO because of this is not an issue that concerns the rondinif\'s bot for automatic change of the commited state");
   }
 
 
