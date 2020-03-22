@@ -37,8 +37,13 @@ cat src/docs/src/store/commited-state.json | jq
 cat src/docs/src/store/commited-state.pug
 ```
 ### ssr build + commit push
-```
+``` sh
+# ssr of the templage - build docs
 npm --ignore-scripts=false run build-docs
+# preview the generated web-app
+opne ./docs/index.html
+
+# commit and push changes
 git add * 
 git commit -m "docs(update): confirm auto generated change"  
 git push origin docs:docs
