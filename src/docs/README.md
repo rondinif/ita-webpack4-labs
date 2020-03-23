@@ -1,3 +1,15 @@
+# docs 
+La [web-page del progetto](https://rondinif.github.io/ita-webpack4-labs/) non 
+richiede la gestione di uno specifico server web in quanto è una [GitHub Page](https://pages.github.com)
+
+La [web-page del progetto](https://rondinif.github.io/ita-webpack4-labs/) 
+comprende una parte statica generata al momento della build
+del codice sorgente presente in questa cartella.
+
+Il prodotto della esecuzione dello script `build-docs` 
+è una web-page **pre-rendirizzata** compilata nella cartella target `docs`
+che è la cartella pubblicata da [GitHub Pages](https://pages.github.com)
+
 # build and deploy docs degli sviluppi locali 
 per la complazione e la pubblicazione dei docs da ambiente di sviluppo locale
 ```
