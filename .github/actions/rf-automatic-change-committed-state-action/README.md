@@ -1,4 +1,4 @@
-# my debug action
+# rf-automatic-change-committed-state-action
 
 This action is for experimental purpose only
 The status of the action is "UNDER DEVELOPMENT"
