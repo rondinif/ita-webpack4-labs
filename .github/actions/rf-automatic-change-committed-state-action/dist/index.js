@@ -2694,14 +2694,14 @@ try {
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
+  // console.log(`The event payload: ${payload}`); // DEBUG: uncomment this to show the payload
   // FR: 
   if (github.context.payload.issue.title == 'rondinif\'s bot for automatic change of the commited state') {
     if (github.context.payload.comment.user.login == process.env['INPUT_WHO-TO-GREET']) {
       if (github.context.payload.issue.state == 'open') {
         const body = github.context.payload.comment.body;
         const arBody = body.split("\n");
-        console.log(`\n\n\\nTODO: processing the body:\n${JSON.stringify(arBody)}\n\n\n`)
+        console.log(`\n\n\\nprocessing the body:\n${JSON.stringify(arBody)}\n\n\n`)
 
         console.log(`the groupId is: ${getGroupId(arBody)}`);
         console.log(`the labId is: ${getLabId(arBody)}`);
@@ -2727,7 +2727,7 @@ try {
             tag: commited.tag + '.' + github.context.payload.comment.id,
             state: {
               groups: [{
-                id: getGroupId(arBody),
+                groupid: getGroupId(arBody),
                 labs: [{
                   id: getLabId(arBody),
                   name: getLabName(arBody),
@@ -2743,18 +2743,42 @@ try {
           }
           commited.state.tag = nextCommitedState.tag;
 
+          console.log("SEARCHING GROUPS:[")
+          console.log(`commited.state.groups: ${JSON.stringify(commited.state.groups)} `);
+          console.log(`getGroupId(arBody)...: ${getGroupId(arBody)}`);
+          console.log("]")
+         
           let groups = commited.state.groups.filter((g) => g.groupid == getGroupId(arBody));
           if (groups.length > 0) { // edit group
             console.log('##[new-commited-state:[EDIT GROUP]:');
-            const groupIndex = findWithAttr(groups, 'groupid', getGroupId(arBody));
+            const groupIndex = findWithAttr(commited.state.groups, 'groupid', getGroupId(arBody));
+
+            console.log("SEARCHING LABS:[");
+            console.log(`groupIndex.............: ${groupIndex}`);
+            console.log(`groups[0].labs: ${JSON.stringify(groups[0].labs)} `);
+            console.log(`getLabId(arBody)...: ${getLabId(arBody)}`);
+            console.log("]")
+
             const labs = groups[0].labs.filter((l) => l.id == getLabId(arBody));
             if (labs.length > 0) { // edit lab            
               console.log('##[new-commited-state:[EDIT LAB]:');
-              const labIndex = findWithAttr(labs, 'id', getLabId(arBody));
+              const labIndex = findWithAttr(groups[0].labs, 'id', getLabId(arBody)); 
+
+              console.log("SEARCHING PAGES:[");
+              console.log(`labIndex.............: ${labIndex}`);
+              console.log(`labs[0].pages: ${JSON.stringify(labs[0].pages)} `);
+              console.log(`getPageTopic(arBody)...: ${getPageTopic(arBody)}`);
+              console.log("]")
+  
               const pages = labs[0].pages.filter((p) => p.topic == getPageTopic(arBody));
               if (pages.length > 0) { // edit page
                 console.log('##[new-commited-state:[EDIT PAGETOPIC]:');
                 const pageIndex = findWithAttr(pages, 'topic', getPageTopic(arBody));
+
+                console.log(`##[new-commited-state:[EDIT PAGETOPIC] groupIndex:${groupIndex}`);
+                console.log(`##[new-commited-state:[EDIT PAGETOPIC] labIndex:${labIndex}`);
+                console.log(`##[new-commited-state:[EDIT PAGETOPIC] pageIndex:${pageIndex}`);
+                
                 commited.state.groups[groupIndex].labs[labIndex].name = nextCommitedState.state.groups[0].labs[0].name;
                 commited.state.groups[groupIndex].labs[labIndex].pages[pageIndex] = nextCommitedState.state.groups[0].labs[0].pages[0];
               }
@@ -2771,7 +2795,7 @@ try {
           }
           else { // new group 
             console.log('##[new-commited-state:[ADD GROUP]:');
-            commited.state.groups.push(nextCommitedState.state.groups[0].labs[0]);
+            commited.state.groups.push(nextCommitedState.state.groups[0]);
           }
 
           console.log('-------------------------------------------------');
@@ -2817,12 +2841,14 @@ try {
   let commited=JSON.parse(rawdata);
   */
 
+  /* DEBUG: uncomment this to show the list of files in workspace 
   const dir = fs.opendirSync(process.env['GITHUB_WORKSPACE'])
   let dirent
   while ((dirent = dir.readSync()) !== null) {
     console.log(dirent.name)
   }
   dir.closeSync()
+  */
 
 } catch (error) {
   core.setFailed(error.message);
