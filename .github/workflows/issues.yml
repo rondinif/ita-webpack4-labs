@@ -9,7 +9,7 @@ env:
 
 jobs:
   reduce:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
@@ -20,7 +20,31 @@ jobs:
       uses: ./.github/actions/rf-automatic-change-committed-state-action
       with:
         who-to-greet: 'rondinif'
+  build:
+    needs: [reduce]
+    runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm build-docs
+      run: |
+        npm ci
+        npm run build-docs --if-present
+        # npm test
+      env:
+        CI: true
+  
+  commit:
+    needs: [reduce, build]
+    runs-on: ubuntu-latest
+    steps:
     - name: Commit files
       run: |
         git config --local user.name "github-actions[bot]"
