@@ -24,8 +24,14 @@ The time we greeted you.
 ## Example usage
 
 ```yaml
-    - name: Create local changes
-      uses: ./.github/actions/my-debug-action
+    - name: Reduce Action Event into Store
+      uses: ./.github/actions/rf-automatic-change-committed-state-action
+
       with:
         who-to-greet: 'rondinif'
 ```
+for example see: `.github/workflows/issues.yml` 
+
+
+# bot-side hydration
+`server-side hydration`
