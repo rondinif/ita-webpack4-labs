@@ -15,11 +15,25 @@ jobs:
       with:
         ref: docs
         persist-credentials: false
-    
+    # use index.js to merge comment action event into new state 
     - name: Create local changes
       uses: ./.github/actions/rf-automatic-change-committed-state-action
       with:
         who-to-greet: 'rondinif'
+    # commit the new state
+    - name: Commit files
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git commit -a -m 'rf-automatic-change-committed-state-action co-authored by: ${{ github.event.comment.user.login }} <${{ github.event.comment.user.id }}+${{ github.event.comment.user.login }}@users.noreply.github.com>'
+    # @see github-push-action/action.yml
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: docs
+    
+
   build:
     needs: [reduce]
     runs-on: ubuntu-latest
@@ -29,6 +43,10 @@ jobs:
         node-version: [12.x]
 
     steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: docs
+        persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -40,11 +58,7 @@ jobs:
         # npm test
       env:
         CI: true
-  
-  commit:
-    needs: [reduce, build]
-    runs-on: ubuntu-latest
-    steps:
+    # commit pre-rendered website to the docs branch 
     - name: Commit files
       run: |
         git config --local user.name "github-actions[bot]"
