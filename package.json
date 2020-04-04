@@ -6,7 +6,7 @@
   "author": "rondinif",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build-lab-01 && npm run build-lab-02a && npm run build-lab-02b && npm run build-lab-02c && npm run build-lab-03 && npm run build-lab-04 && npm run build-lab-05 && npm run build-lab-06 && npm run build-lab-07 && npm run build-lab-08 && npm run build-lab-09 && npm run  build-lab-83-pug && npm run build-lab-83-pug-adv-a && npm run build-lab-pug-01 && npm run build-lab-pug-01-adv-a && npm run build-lab-pug-02 && npm run build-lab-pug-02-adv-a && npm run build-lab-pug-03",
+    "build": "npm --ignore-scripts=false run build-lab-01 && npm --ignore-scripts=false run build-lab-02a && npm --ignore-scripts=false run build-lab-02b && npm --ignore-scripts=false run build-lab-02c && npm --ignore-scripts=false run build-lab-03 && npm --ignore-scripts=false run build-lab-04 && npm --ignore-scripts=false run build-lab-05 && npm --ignore-scripts=false run build-lab-06 && npm --ignore-scripts=false run build-lab-07 && npm --ignore-scripts=false run build-lab-08 && npm --ignore-scripts=false run build-lab-09 && npm --ignore-scripts=false run  build-lab-83-pug && npm --ignore-scripts=false run build-lab-83-pug-adv-a && npm --ignore-scripts=false run build-lab-pug-01 && npm --ignore-scripts=false run build-lab-pug-01-adv-a && npm --ignore-scripts=false run build-lab-pug-02 && npm --ignore-scripts=false run build-lab-pug-02-adv-a && npm --ignore-scripts=false run build-lab-pug-03",
     "build-docs": "npx webpack --config src/docs/webpack.config.js",
     "debug-docs": "node --inspect-brk=5858 node_modules/webpack/bin/webpack.js --colors --config src/docs/webpack.config.js --mode=development",
     "ex01": "rm -rf dist/ex01; webpack-cli --config=./src/ex01/webpack.config-ex01.js --mode=development --output=dist/ex01/ex01.js --entry=./src/ex01/src/file.js",
@@ -62,6 +62,7 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
+    "kind-of": "^6.0.3",
     "lodash": "^4.17.15"
   }
 }
