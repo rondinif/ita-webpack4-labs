@@ -60,6 +60,7 @@ module.exports = {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: `${exampleId}`,
+        chunksSortMode: "none" ,
         template: PATHS.src + '/index.pug',
         inlineSource: '.(js|css)',
         templateParameters: {

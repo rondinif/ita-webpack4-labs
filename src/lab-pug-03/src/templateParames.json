@@ -1,0 +1,46 @@
+{
+    "tags": {
+        "headTags": [],
+        "bodyTags": [
+            {
+                "tagName": "script",
+                "voidTag": false,
+                "attributes": {
+                    "defer": false,
+                    "src": "main.bundle.js"
+                }
+            }
+        ]
+    },
+    "files": {
+        "publicPath": "",
+        "js": [
+            "main.bundle.js"
+        ],
+        "css": []
+    },
+    "options": {
+        "template": "/Users/ronda/projects/rondinif/ita-webpack4-labs/node_modules/html-webpack-plugin/lib/loader.js!/Users/ronda/projects/rondinif/ita-webpack4-labs/src/lab-pug-03/src/index.pug",
+        "templateContent": false,
+        "templateParameters": {
+            "some": "value"
+        },
+        "filename": "index.html",
+        "hash": false,
+        "inject": "body",
+        "scriptLoading": "blocking",
+        "compile": true,
+        "favicon": false,
+        "minify": "auto",
+        "cache": true,
+        "showErrors": true,
+        "chunks": "all",
+        "excludeChunks": [],
+        "chunksSortMode": "none",
+        "meta": {},
+        "base": false,
+        "title": "lab-pug-03",
+        "xhtml": false,
+        "inlineSource": ".(js|css)"
+    }
+}

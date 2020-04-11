@@ -13,10 +13,10 @@ html(lang='en')
     .debug#api!= process.env.PHYTOJS_API_SERVICE_URL
     h3 process.env
     .debug!= JSON.stringify(process.env)
-    h3 locals.foo()
-    .debug!= locals.foo()
-    h3 locals
-    .debug!= JSON.stringify(locals)
+    h3 locals.htmlWebpackPlugin.options.templateParameters.foo()
+    .debug!= locals.htmlWebpackPlugin.options.templateParameters.foo() 
+    h3 locals.htmlWebpackPlugin.options.templateParameters
+    .debug!= JSON.stringify(locals.htmlWebpackPlugin.options.templateParameters)
     h3 this
     .debug!= JSON.stringify(Object.getOwnPropertyNames(this))
     h3 global
