@@ -14,9 +14,9 @@ html(lang='en')
     h3 process.env
     .debug!= JSON.stringify(process.env)
     h3 locals.foo()
-    .debug!= locals.foo()
+    .debug!= templateParams.htmlWebpackPlugin.options.templateParameters.foo()
     h3 locals
-    .debug!= JSON.stringify(locals)
+    .debug!= JSON.stringify(templateParams.htmlWebpackPlugin.options.templateParameters)
     h3 this
     .debug!= JSON.stringify(Object.getOwnPropertyNames(this))
     h3 global

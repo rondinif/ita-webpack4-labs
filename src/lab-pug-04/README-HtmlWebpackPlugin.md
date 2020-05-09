@@ -179,7 +179,7 @@ html(lang='en')
 # Parte 3: Sintesi delle modifiche necessarie al codice pug per evitare l'errore `TypeError: Converting circular structure to JSON`
 
 ## con `htmlWebpackPlugin` v/4.2.0
-### JSON.stringifytemplateParams)
+### JSON.stringify(locals))
 TypeError: Converting circular structure to JSON
 ### JSON.stringify(templateParams.htmlWebpackPlugin.options.templateParameters)
 "{"some":"value"}"

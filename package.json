@@ -37,6 +37,7 @@
     "start-lab-pug-02-adv-a": "webpack-dev-server --config src/lab-pug-02/webpack.config-advanced-a.js --mode=development",
     "build-lab-pug-03": "npx webpack --config src/lab-pug-03/webpack.config.js --mode=development",
     "buildx-lab-pug-03": "node --inspect node_modules/.bin/webpack --config src/lab-pug-03/webpack.config.js --mode=development",
+    "buildprod-lab-pug-03": "npx webpack --config src/lab-pug-03/webpack.config.js --mode=production",
     "debug-lab-pug-03": "node --inspect-brk=5858 node_modules/webpack/bin/webpack.js --colors --config src/lab-pug-03/webpack.config.js --mode=development",
     "build-lab-pug-04": "npx webpack --config src/lab-pug-04/webpack.config.js --mode=development",
     "debug-lab-pug-04": "node --inspect-brk=5858 node_modules/webpack/bin/webpack.js --colors --config src/lab-pug-04/webpack.config.js --mode=development",
