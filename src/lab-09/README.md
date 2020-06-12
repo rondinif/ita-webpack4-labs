@@ -9,7 +9,7 @@ proviamo le "source-maps", cosa sono a cosa servono e come si generano
 
 sono disponibili due *task* diversi per fare esperimenti in questo laboratorio:
 ``` bash
-pm --ignore-scripts=false run build-lab-09 
+npm --ignore-scripts=false run build-lab-09 
 # or
 npm run watch-lab-09 
 ```
