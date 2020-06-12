@@ -18,7 +18,7 @@ grazie al plugin `clean-webpack-plugin` si manteniene pulita la cartella di dest
 
 ## per eseguire la `build`
 ``` bash
-$ npm run build-lab-83
+$ pm --ignore-scripts=false run build-lab-83
 
 ## vantaggi
 ## come funziona

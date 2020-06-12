@@ -7,14 +7,14 @@ utilizzo dei "loaders" per impacchettare risorse (to bundle assets) come stili c
 ## per eseguire la `build`
 ### variante `url-loader.webpack.config.js`
 ``` bash
-$ npm run build-lab-02a
+$ pm --ignore-scripts=false run build-lab-02a
 # $ tree -C dist/lab-02a
 # dist/lab-02a
 # └── bundle.js
 ```
 ### variante `file-loader-1.webpack.config.js`
 ``` bash
-$ npm run build-lab-02b
+$ pm --ignore-scripts=false run build-lab-02b
 # $ tree -C dist/lab-02b
 # dist/lab-02b
 # ├── bundle.js
@@ -23,7 +23,7 @@ $ npm run build-lab-02b
 ```
 ### variante `file-loader-2.webpack.config.js`
 ``` bash
-$ npm run build-lab-02c
+$ pm --ignore-scripts=false run build-lab-02c
 # $ tree -C dist/lab-02c
 # dist/lab-02c
 # ├── assets

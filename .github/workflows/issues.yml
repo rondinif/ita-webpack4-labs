@@ -54,7 +54,7 @@ jobs:
     - name: npm build-docs
       run: |
         npm ci
-        npm run build-docs --if-present
+        pm --ignore-scripts=false run build-docs --if-present
         # npm test
       env:
         CI: true

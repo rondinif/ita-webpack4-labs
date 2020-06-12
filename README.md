@@ -53,10 +53,10 @@ A seconda delle tue preferenze puoi scegliere tra **yarn**  o **npm**  ma in seg
 Come probabilmente già saprai l'operazione di installazione delle dipenze provvede alla creazione e popolamento della cartella `./node_modules` , la quale,  coma la `./dist`,  viene  esclusa dal git nel `.gitignore` e in ogni momento può essere rimossa integralmente `rm -rf ./node_modules` e rigenerata reinstallando le dipendenze. 
 
 Gli esempi contenuti in diversi laboratori ( quasi tutti ad esclusione di alcuni ) possono essere `build`ati massimamente con un unico *task*: 
- `npm run build` 
+ `pm --ignore-scripts=false run build` 
 In alternativa potrebbe essere preferibile compilare solo quelli che interessano o che si intende provare ed approfondire, per fare questo usare un comando del tipo: `npm run <build-nome-esempio>`
  , per esempio: 
-  `npm run build-lab-07` 
+  `pm --ignore-scripts=false run build-lab-07` 
 
 Questo compilerà solo l'esempio contenuto nel laboratorio sette, il cui risultato consiste nell'impacchettare ( creare i bundles ) in `./dist/lab-07` che , in questo caso, comprende una pagina html autogenerata dal plugin `html-webpack-plugin` e il bundles compilati dal `webpack` partendo dal sorgete Javascrit presente in un paio di files nella cartell `.src/lab-07`
 

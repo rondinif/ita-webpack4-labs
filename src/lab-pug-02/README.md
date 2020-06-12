@@ -62,10 +62,10 @@ Negli script di questo laboratorio è stata abbozzata una implentazione "vanilla
 ## per eseguire la `build`
 nei task configurati in `package.json` sono stati predisposti questi esperimenti:
 ``` bash
-npm run build-lab-pug-02
+pm --ignore-scripts=false run build-lab-pug-02
 # possono esistere altre variant di qyesto laboratorio, per esempio 
 # per la variante 'adv-a' ( production ) utilizzare: 
-npm run build-lab-pug-02-adv-a
+pm --ignore-scripts=false run build-lab-pug-02-adv-a
 # per la variante adv-a ( development watch mode  ) utilizzare: 
 npm run start-lab-pug-02-adv-a
 ```

@@ -20,7 +20,7 @@ Gli strumenti di sviluppo di Chrome [chrome-devtools](https://developers.google.
 ![debugging](./schermate/lab-11-b.png)
 
 ## note
-notare che gli esperimenti qui definiti **non** vengono eseguiti dal *task* generale di build: `npm run build` ma occorre eseguire il *task* specifico `npm run start-lab-10`
+notare che gli esperimenti qui definiti **non** vengono eseguiti dal *task* generale di build: `pm --ignore-scripts=false run build` ma occorre eseguire il *task* specifico `npm run start-lab-10`
 
 ## per approfondimenti
 - https://webpack.js.org/configuration/dev-server/

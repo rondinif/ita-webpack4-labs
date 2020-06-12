@@ -41,10 +41,10 @@ daccordo con [questa risposta non usiamo ](https://stackoverflow.com/a/49373676)
 ## per eseguire la `build`
 nei task configurati in `package.json` sono stati predisposti questi esperimenti:
 ``` bash
-npm run build-lab-pug-01
+pm --ignore-scripts=false run build-lab-pug-01
 # possono esistere altre variant di qyesto laboratorio, per esempio 
 # per la variante 'adv-a' ( production ) utilizzare: 
-npm run build-lab-pug-01-adv-a
+pm --ignore-scripts=false run build-lab-pug-01-adv-a
 # per la variante adv-a ( development watch mode  ) utilizzare: 
 npm run start-lab-pug-01-adv-a
 ```

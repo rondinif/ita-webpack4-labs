@@ -110,7 +110,7 @@ notare che il `pug-loader` da solo non è sufficiente , occorre anche installare
 ## per eseguire la `build`
 nei task configurati in `package.json` sono stati predisposti questi esperimenti:
 ``` bash
-npm run build-lab-pug-03
+pm --ignore-scripts=false run build-lab-pug-03
 ```
 
 il pacchetto risultante dalla compilazione vienew creato nella cartella `dist/lab-pug-03/`

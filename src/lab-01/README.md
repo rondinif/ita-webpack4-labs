@@ -5,9 +5,9 @@ elementare esercizio che consiste nell'impacchettare il codice di `lab-01-unboun
 
 ## per eseguire la `build`
 ``` bash
-npm run build-lab-01
+pm --ignore-scripts=false run build-lab-01
 # oppure
-npm run build-lab-01-with-npx
+pm --ignore-scripts=false run build-lab-01-with-npx
 ```
 in questo modo `webpack` viene invocato con lo script `src/lab-01/webpack.config.js` e  provvede alla generazione di `/dist/lab-01/main.js` partendo dalla `entry: './src/lab-01/src/index.js'`
 

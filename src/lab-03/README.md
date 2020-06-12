@@ -13,7 +13,7 @@ cp -R <your-font/webfont-local-git-clone>/demo/ .
 
 ## per eseguire la `build`
 ``` bash
-$ npm run build-lab-03
+$ pm --ignore-scripts=false run build-lab-03
 # $ tree -C dist/lab-03
 # dist/lab-03
 # ├── a7a36cd3ecf7e5f9aafbfa9b7e3da99c.woff
