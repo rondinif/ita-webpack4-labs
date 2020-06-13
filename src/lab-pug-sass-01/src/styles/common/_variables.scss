@@ -1,5 +1,7 @@
+$ratio: ( 5 * $ratio-from-sass-loader );
 $area-border-as-cm: 10;
 $area-border-as-inch: ( $area-border-as-cm * 0.393701 ) ;
 :export {
    areaBorderInch: $area-border-as-inch;
+   ratio: $ratio;
 }

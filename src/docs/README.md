@@ -14,7 +14,7 @@ che è la cartella pubblicata da [GitHub Pages](https://pages.github.com)
 per la complazione e la pubblicazione dei docs da ambiente di sviluppo locale
 ```
 git checkout docs
-nnpm --ignore-scripts=false run build-docs
+npm --ignore-scripts=false run build-docs
 git add * 
 git commit -m "docs(update): there are news"  
 git push origin docs:docs
@@ -51,7 +51,7 @@ cat src/docs/src/store/commited-state.pug
 ### ssr build + commit push
 ``` sh
 # ssr of the templage - build docs
-nnpm --ignore-scripts=false run build-docs
+npm --ignore-scripts=false run build-docs
 # preview the generated web-app
 opne ./docs/index.html
 

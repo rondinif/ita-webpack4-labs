@@ -20,10 +20,22 @@ in questo caso il passaggio del *valore di variabile* è da `scss` a `javascript
 - https://github.com/pugjs/pug
 - https://github.com/pugjs/pug-loader
 
-
+- https://webpack.js.org/loaders/sass-loader/
 - https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
 
-## cosa possiamo provare in `lab-pug-03'
+## cosa possiamo provare in `lab-pug-sass-01'
+in `lab-pug-sass-01` riprendiamo `lab-pug-03` e in aggiunta vediamo come passare
+dei valori ai `css` che compileremo con `sass/scss`.
+
+![](./schermate/1-webpack.config.js-pug.png)
+![](./schermate/1-webpack.config.js-scss.png)
+![](./schermate/2-variables.scss.png)
+![](./schermate/3-foo.scss.png)
+![](./schermate/4-index.js-imports.png)
+![](./schermate/4-index.js-scss.png)
+![](./schermate/5-index.html.png)
+
+### cosa possiamo provare in `lab-pug-03'
 in `lab-pug-03` approfondiamo il tema SSR già trattato anche in [lab-pug-02](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-02) allo scopo di: 
 - capire a fondo il funzionamento dei webpack's **loaders** e dei webpack's **plugins**
     - approfondimento sul tema **loaders**: 

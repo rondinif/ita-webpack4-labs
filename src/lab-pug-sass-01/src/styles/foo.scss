@@ -1,0 +1,5 @@
+@import "common/_variables.scss";
+
+h3 {
+    width: ( $value * $ratio ); // $ratio proviene dalle common/_variables.scss mentre $value proviene dal webpack.confog.js
+}
