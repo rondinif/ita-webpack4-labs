@@ -90,6 +90,7 @@ i laboratori [`lab-09`](https://github.com/rondinif/ita-webpack4-labs/tree/maste
 -  [`lab-pug-01`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-01),
 -  [`lab-pug-02`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-02),
 -  [`lab-pug-03`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-03),
+-  [`lab-pug-sass-01`](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-sass-01),
 
 ## Contributing 
 Le tue idee sono importanti, non perdere l'occasione per fornire il tuo speciale contributo a questo repo.  
