@@ -1,9 +1,19 @@
-<!-- private/debug-dot-env/pug-loader-template-debug.md -->
-
-tramite [repl]() possiamo
+<!--file originale vedi: private/debug-dot-env/pug-loader-template-debug.md -->
+# Utilisso di repl per la verifica del funzionamento dal `pug-loader`
+tramite [repl](https://it.wikipedia.org/wiki/Read–eval–print_loop) possiamo
 riprodurre e studiare i passaggi che vengono eseguiti nel `pug-loader` 
-che sono vericabili anche in debugging
-è quello che viene prodotto nel `pug-loader` ( che può essere catturato con debugger )
+ , i quali sono verificabili anche in debugging, 
+
+## function run()
+```
+$ grep -ril compileClient .
+./node_modules/jstransformer/index.js
+./node_modules/pug/History.md
+./node_modules/pug/lib/index.js
+./node_modules/pug-runtime/README.md
+./node_modules/pug-loader/index.js
+```
+prendiamo da `./node_modules/pug-loader/index.js` la funzione `run()`
 ``` js 
 function run() {
     try {
@@ -23,15 +33,18 @@ function run() {
         });
 ```
 
+## DEBUG
+### attivazione del processo di build in madalità debug
 ``` bash
 ita-webpack4-labs (master)*$ NODE_ENV=development npm run debug-lab-pug-03
 
-> @rondinif/ita-webpack4-labs@0.1.0 debug-lab-pug-03 /Users/ronda/projects/rondinif/ita-webpack4-labs
+> @rondinif/ita-webpack4-labs@0.1.0 debug-lab-pug-03 ~/projects/rondinif/ita-webpack4-labs
 > node --inspect-brk=5858 node_modules/webpack/bin/webpack.js --colors --config src/lab-pug-03/webpack.config.js --mode=development
 
 Debugger listening on ws://127.0.0.1:5858/a5128468-42f2-47e6-ae18-2390e794263e
 For help, see: https://nodejs.org/en/docs/inspector
 ```
+### attach del debugger da vscode
 .vscode/launch.json
 ``` json 
     {
@@ -45,7 +58,7 @@ For help, see: https://nodejs.org/en/docs/inspector
     }
 ```
 
-
+## REPL 
 ``` js
 ita-webpack4-labs (master)*$ node 
 Welcome to Node.js v13.5.0.

@@ -4,7 +4,9 @@ vedere anche:
 - src/lab-83-pug/README-wds-issue.md
 TBD: https://developer.github.com/v3/ + Safari 20200206-tornaci ( 11 pannello)
 -->
-# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-pug-03**:  recupero e utilizzo di dati e di configurazioni di ambiente da utilizzare nella fase di build e pacchettizzazione
+# [ita-webpack4-labs](https://github.com/rondinif/ita-webpack4-labs) > **lab-pug-saas-01**: come `lab-pug-03` ma integrazione di variabile tra **stili css** e **javascript**
+
+in questo caso il passaggio del *valore di variabile* è da `scss` a `javascript` (*server-side*) ed infine ad un elemento `html` (*client-side*)
 
 
 ## guide di riferimento 
@@ -18,7 +20,22 @@ TBD: https://developer.github.com/v3/ + Safari 20200206-tornaci ( 11 pannello)
 - https://github.com/pugjs/pug
 - https://github.com/pugjs/pug-loader
 
-## cosa possiamo provare in `lab-pug-03'
+- https://webpack.js.org/loaders/sass-loader/
+- https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+
+## cosa possiamo provare in `lab-pug-sass-01'
+in `lab-pug-sass-01` riprendiamo `lab-pug-03` e in aggiunta vediamo come passare
+dei valori ai `css` che compileremo con `sass/scss`.
+
+![](./schermate/1-webpack.config.js-pug.png)
+![](./schermate/1-webpack.config.js-scss.png)
+![](./schermate/2-variables.scss.png)
+![](./schermate/3-foo.scss.png)
+![](./schermate/4-index.js-imports.png)
+![](./schermate/4-index.js-scss.png)
+![](./schermate/5-index.html.png)
+
+### cosa possiamo provare in `lab-pug-03'
 in `lab-pug-03` approfondiamo il tema SSR già trattato anche in [lab-pug-02](https://github.com/rondinif/ita-webpack4-labs/tree/master/src/lab-pug-02) allo scopo di: 
 - capire a fondo il funzionamento dei webpack's **loaders** e dei webpack's **plugins**
     - approfondimento sul tema **loaders**: 
@@ -110,11 +127,11 @@ notare che il `pug-loader` da solo non è sufficiente , occorre anche installare
 ## per eseguire la `build`
 nei task configurati in `package.json` sono stati predisposti questi esperimenti:
 ``` bash
-npm --ignore-scripts=false run build-lab-pug-03
+$ npm --ignore-scripts=false run build-lab-pug-sass-01
 ```
 
-il pacchetto risultante dalla compilazione viene creato nella cartella `dist/lab-pug-03/`
-il file `dist/lab-pug-03/index.html`, in questo caso,  può essere aperto anche direttamente dal filesystem,
+il pacchetto risultante dalla compilazione viene creato nella cartella `dist/lab-pug-sass-01/`
+il file `dist/lab-pug-saas-01/index.html`, in questo caso,  può essere aperto anche direttamente dal filesystem,
 in alternativa è sempre possibile "servirlo" ed aprirlo come pagina web  ovvero:  
 ``` bash
 python -m SimpleHTTPServer 

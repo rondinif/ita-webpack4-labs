@@ -17,6 +17,13 @@ npm install --save-dev express webpack-dev-middleware
 npm install --save-dev dotenv-flow-webpack
 # lista non esaustiva ottenuta con: 
 # history | grep 'npm install'
+
+# additional modules installed with ignore-scrips=true configuration
+npm --ignore-scrips=false install sass-loader node-sass --save-dev
+node node_modules/node-sass/scripts/install.js 
+# Downloading binary from https://github.com/sass/node-sass/releases/download/v4.14.1/darwin-x64-72_binding.node
+# Download complete
+# Binary saved to ~/projects/rondinif/ita-webpack4-labs/node_modules/node-sass/vendor/darwin-x64-72/binding.node
 ```
 quando il progetto viene scaricato sull'ambiente di sviluppo ( o di build ), 
 ad esempio clonand il repo con `git clone 
@@ -59,6 +66,7 @@ Per uleriori informazioni leggere anche il README.md contenuto nella cartella de
 - lab-83-pug 
 - lab-pug-01
 - lab-pug-02
+- lab-pug-sass-01
 
 ###     "style-loader": "^1.1.2",
 - lab-02
@@ -68,6 +76,7 @@ Per uleriori informazioni leggere anche il README.md contenuto nella cartella de
 - lab-83-pug 
 - lab-pug-01
 - lab-pug-02
+- lab-pug-sass-01
 
 ###     "file-loader": "^5.0.2",
 - lab-02
@@ -100,8 +109,15 @@ se stai cercando esercitazioni nelle quali venga caricato json a *build-time* pu
 - lab-pug-02
 - lab-pug-03
 
-<!-- PLUGINS -->
+<!-- SASS SCSS -->
+### sass-loader": "^8.0.2", 
+- lab-pug-sass-01
 
+### "node-sass": "^4.14.1",
+
+- lab-pug-sass-01
+
+<!-- PLUGINS -->
 ### "html-webpack-plugin": "^3.2.0",
 - lab-07
 - lab-08
@@ -151,9 +167,19 @@ se stai cercando esercitazioni nelle quali venga caricato json a *build-time* pu
 - lab-pug-01
 <!-- - lab-pug-02  ?? controllare -->
 
+
+
+
+
+
+
+<!--
+20200612 - temporaneamente sospeso perchè npm audit riportava vulnerabilità in una delle sue dipendenze
+
 ## altre dev-dependencies
 ###    "commitlint": "^8.2.0",
 migliora i processi di *ci/cd* mantenendo uniforme lo stile dei messaggi di commit, vedi anche 
 - [husky - git hooks made easy ](https://github.com/typicode/husky) 
 - [commitlint -  lint commit messages ](https://github.com/conventional-changelog/commitlint) 
 - [slides circa i vantaggi di usare *convenzioni* anche per i messaggi di commit - by Mario Nebl](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/10)
+-->

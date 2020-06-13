@@ -20,7 +20,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm ci
-        pm --ignore-scripts=false run build --if-present
+        npm --ignore-scripts=false run build --if-present
         # npm test
       env:
         CI: true

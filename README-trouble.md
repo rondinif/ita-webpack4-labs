@@ -11,7 +11,7 @@ vedi: **lab-pug-03** in `src/lab-pug-03/` eseguire la compilazione in modo che n
 ``` bash
 $ npm run debug-lab-pug-03
 
-> @rondinif/ita-webpack4-labs@0.1.0 debug-lab-pug-03 /Users/ronda/projects/rondinif/ita-webpack4-labs
+> @rondinif/ita-webpack4-labs@0.1.0 debug-lab-pug-03 ~/projects/rondinif/ita-webpack4-labs
 > node --inspect-brk=5858 node_modules/webpack/bin/webpack.js --colors --config src/lab-pug-03/webpack.config.js --mode=development
 ```
 
