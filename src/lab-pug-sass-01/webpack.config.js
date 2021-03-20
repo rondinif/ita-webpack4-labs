@@ -9,9 +9,11 @@ const PATHS = {
   src: path.join(__dirname, 'src'),
   // dist: path.join(__dirname, 'dist')
 };
-
-console.log(PATHS.src);
+// console.log(PATHS.src);
 // console.log(PATHS.dist);
+
+const commited = require(`${PATHS.src}/store/commited-state.json`);
+// console.log(JSON.stringify(commited));
 
 module.exports = {
   entry: `./src/${exampleId}/src/index.js`,
@@ -45,7 +47,8 @@ module.exports = {
                 const relativePath = path.relative(rootContext, resourcePath);
                 console.log(`##> prependData loaderContext relativePath>:${relativePath}`);
                 if (relativePath === 'src/lab-pug-sass-01/src/styles/foo.scss') {
-                  return '$ratio-from-sass-loader: 1; $value: 100px;';
+                  const cardsList = commited.state.cards.map( (card) => `'${card.type}'` ).join(',');
+                  return `$ratio-from-sass-loader: 1; $value: 100px; $cards: ${cardsList};`;
                 }
                 else if ( relativePath === 'src/lab-pug-sass-01/src/styles/common/_variables.scss') {
                   return '$ratio-from-sass-loader: 2;';

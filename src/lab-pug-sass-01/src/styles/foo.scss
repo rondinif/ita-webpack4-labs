@@ -1,5 +1,9 @@
 @import "common/_variables.scss";
 
+@each $card in $cards {
+    @debug $card;
+}
+
 h3 {
     width: ( $value * $ratio ); // $ratio proviene dalle common/_variables.scss mentre $value proviene dal webpack.confog.js
 }
