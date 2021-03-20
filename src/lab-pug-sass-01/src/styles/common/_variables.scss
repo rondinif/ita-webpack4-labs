@@ -1,6 +1,9 @@
 $ratio: ( 5 * $ratio-from-sass-loader );
 $area-border-as-cm: 10;
 $area-border-as-inch: ( $area-border-as-cm * 0.393701 ) ;
+@debug '#### [ _variables SASS DEBUG ] ####';
+@debug type-of($area-border-as-inch);
+@debug $area-border-as-inch;
 :export {
    areaBorderInch: $area-border-as-inch;
    ratio: $ratio;
